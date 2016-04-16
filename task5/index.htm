@@ -4,6 +4,245 @@
 	<meta charset="UTF-8">
 	<title>HTML文章编码</title>
 	<!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+	<style>
+		body {
+		  font: 16px 'Microsoft Yahei';
+		  line-height: 1.5;
+		  -webkit-box-sizing: border-box;
+		     -moz-box-sizing: border-box;
+		          box-sizing: border-box;
+		  background-color: #dedede;
+		}
+		body,
+		p,
+		h1,
+		h2,
+		h3 {
+		  margin: 0;
+		}
+		ul {
+		  padding: 0;
+		  margin: 0;
+		}
+		li {
+		  list-style: none;
+		}
+		a {
+		  text-decoration: none;
+		  color: #2341de;
+		}
+		.clearfix {
+		  content: '';
+		  display: block;
+		  clear: both;
+		}
+		.fl {
+		  float: left;
+		}
+		.fr {
+		  float: right;
+		}
+		body {
+		  min-width: 780px;
+		}
+		header {
+		  height: 50px;
+		  background-color: #333;
+		}
+		header h1 {
+		  width: 30px;
+		  height: 30px;
+		  margin: 10px;
+		  background: url(http://img.zcool.cn/community/010d1f5542e7890000002b010b8d24.jpg) no-repeat;
+		  -webkit-background-size: cover;
+		     -moz-background-size: cover;
+		       -o-background-size: cover;
+		          background-size: cover;
+		  -webkit-border-radius: 50%;
+		     -moz-border-radius: 50%;
+		          border-radius: 50%;
+		  cursor: pointer;
+		  -webkit-transition: -webkit-transform 0.3s ease-in;
+		     -moz-transition: -moz-transform 0.3s ease-in;
+		       -o-transition: -o-transform 0.3s ease-in;
+		          transition: transform 0.3s ease-in;
+		}
+		header h1:hover {
+		  -webkit-transform: rotateZ(360deg);
+		  -moz-transform: rotateZ(360deg);
+		       transform: rotateZ(360deg);
+		}
+		header nav li {
+		  display: inline-block;
+		  margin-right: 15px;
+		}
+		header li a {
+		  display: inline-block;
+		  line-height: 50px;
+		  color: #fff;
+		}
+		header li a:hover {
+		  color: #ff9966;
+		}
+		header li.active a {
+		  color: #ff9966;
+		}
+		article {
+		  padding: 20px;
+		  margin: 20px;
+		  margin-right: 380px;
+		  background-color: #fff;
+		  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+		     -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+		          box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+		}
+		article p {
+		  text-indent: 20px;
+		  margin: 10px;
+		}
+		article p span {
+		  display: inline-block;
+		  line-height: 30px;
+		  margin-right: 10px;
+		  color: #dedede;
+		}
+		article a[title="img"] {
+		  display: block;
+		  width: 120px;
+		  height: 68px;
+		  border: 1px solid #cccccc;
+		  background: url(http://img1.imgtn.bdimg.com/it/u=294434968,4242269251&fm=206&gp=0.jpg) center;
+		  -webkit-background-size: cover;
+		     -moz-background-size: cover;
+		       -o-background-size: cover;
+		          background-size: cover;
+		  -webkit-transition: -webkit-transform 0.3s ease-in;
+		     -moz-transition: -moz-transform 0.3s ease-in;
+		       -o-transition: -o-transform 0.3s ease-in;
+		          transition: transform 0.3s ease-in;
+		}
+		article a[title="img"]:hover {
+		  -webkit-transform: scale(1.05);
+		     -moz-transform: scale(1.05);
+		      -ms-transform: scale(1.05);
+		       -o-transform: scale(1.05);
+		          transform: scale(1.05);
+		}
+		article .list_style {
+		  padding: 20px;
+		}
+		article .img_tit {
+		  display: inline-block;
+		  width: 122px;
+		  text-indent: 0!important;
+		  text-align: center;
+		  padding: 5px;
+		  border: 1px solid #cccccc;
+		  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+		     -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+		          box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+		}
+		article .img_tit span {
+		  display: block;
+		  width: 100%;
+		  text-align: center;
+		}
+		article table {
+		  width: 100%;
+		  min-width: 300px;
+		  border-top: 1px solid #cccccc;
+		  border-left: 1px solid #cccccc;
+		}
+		article table thead tr {
+		  color: #fff;
+		  background-color: #333;
+		}
+		article table tfoot tr {
+		  background-color: #cdcdcd;
+		}
+		article table td {
+		  padding-left: 5px;
+		  border-right: 1px solid #cccccc;
+		  border-bottom: 1px solid #cccccc;
+		}
+		hgroup h2 {
+		  line-height: 50px;
+		}
+		hgroup h3 {
+		  line-height: 36px;
+		  font-weight: normal;
+		  color: #666;
+		}
+		aside {
+		  width: 300px;
+		  padding: 20px;
+		  margin: 20px;
+		  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+		     -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+		          box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+		  background-color: #fff;
+		}
+		.end_hg h2,
+		.end_hg h3 {
+		  display: inline-block;
+		  font: bold 16px 'Microsoft Yahei';
+		  line-height: 30px;
+		  margin-bottom: 20px;
+		  color: #333;
+		}
+		.end_hg h2 {
+		  padding-left: 10px;
+		  border-left: 3px solid #ccc;
+		}
+		.form_cont {
+		  font-size: 14px;
+		}
+		.form_cont div {
+		  margin-bottom: 10px;
+		}
+		.form_cont label {
+		  display: inline-block;
+		  width: 40%;
+		  text-align: right;
+		}
+		.form_cont input[type="text"] {
+		  width: 40%;
+		}
+		.form_cont p {
+		  font-size: 12px;
+		  line-height: 18px;
+		  margin-left: 41%;
+		  color: #ccc;
+		}
+		.form_cont .man {
+		  vertical-align: text-top;
+		}
+		.form_cont textarea {
+		  width: 50%;
+		  vertical-align: text-top;
+		}
+		.form_cont input[type="submit"] {
+		  width: 100%;
+		  font: bold 12px 'Microsoft Yahei';
+		  line-height: 30px;
+		  border: none;
+		  color: #fff;
+		  background-color: #2341de;
+		  -webkit-border-radius: 6px;
+		     -moz-border-radius: 6px;
+		          border-radius: 6px;
+		}
+		footer {
+		  line-height: 50px;
+		  text-align: center;
+		  background-color: #333;
+		}
+		footer address {
+		  display: inline-block;
+		  font-style: normal;
+		  color: #fff;
+		}
+	</style>
 </head>
 <body>
 	<header class="clearfix">
