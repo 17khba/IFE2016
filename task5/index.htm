@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML文章编码</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+</head>
+<body>
+	<header class="clearfix">
+		<h1 class="fl"></h1>
+	    <nav class="fr">
+	    	<ul class="nav_list">
+		        <li class="active"><a class="active" href="javascript:;">导航链接一</a></li>
+		        <li><a href="javascript:;">导航链接二</a></li>
+		        <li><a href="javascript:;">导航链接三</a></li>
+		        <li><a href="javascript:;">导航链接四</a></li>
+	        </ul>
+	    </nav>
+	</header><!-- /header -->
+	<aside class="fr">
+		<hgroup class="end_hg">
+			<h2 class="bdl">这里以后是一个侧栏,</h2>
+			<h3>这是侧栏的标题</h3>
+		</hgroup>
+		<form class="form_cont" action="code_test_submit" method="get" accept-charset="utf-8">
+			<div>
+				<label for="email">请输入邮箱地址：</label>
+				<input id="email" type="email" name="email" value="" placeholder="这是一个输入框" required="required">
+				<p>邮箱地址请按要求输入</p>
+			</div>
+			<div>
+				<label for="pw">请输入密码：</label>
+				<input id="pw" type="password" name="pw" value="" placeholder="这是一个输入框" required="required">
+			</div>
+			<div>
+				<label for="rpw">请重复输入密码：</label>
+				<input id="rpw" type="password" name="" value="" placeholder="这是一个输入框">
+				<p>密码为6-16位英文数字</p>
+			</div>
+			<div>
+				<label for="sex">性别：</label>
+				<input id="sex" type="radio" name="" value="">男
+				<input type="radio" name="" value="">女
+			</div>
+			<div>
+				<label for="city">城市：</label>
+				<select id="city" name="city">
+					<option value="beijing" selected>北京</option>
+					<option value="shagnhai">上海</option>
+					<option value="guangzhou">广州</option>
+					<option value="shenzhen">深圳</option>
+				</select>
+			</div>
+			<div>
+				<label for="sport">爱好：</label>
+				<input id="sport" type="checkbox" name="" value="">运动
+				<input type="checkbox" name="" value="">艺术
+				<input type="checkbox" name="" value="">科学
+			</div>
+			<div>
+				<label for="me" class="man">个人描述：</label>
+				<textarea id="me" name="" placeholder="请一句话对你自己进行描述"></textarea>
+			</div>
+			<hr>
+			<input type="submit" name="" value="确认提交">
+		</form>
+	</aside>
+	<article class="art1">
+		<hgroup>
+			<h2>文章一级标题</h2>
+	    	<h3>文章二级标题</h3>
+		</hgroup>
+		<p>
+			<span>文章作者</span>
+			<span>文章发表时间</span>
+		</p>
+		<p>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落,换行了<br>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落.</p>
+		<a href="javascript:;" title="img"></a>
+		<p>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落<br>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落<a href="http://ife.biadu.com" target="_blank">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落</p>
+	</article>
+	<article class="art2">
+		<hgroup>
+			<h2>另一篇文章的一级标题</h2>
+			<h3>文章二级标题</h3>
+		</hgroup>
+		<p>
+			<span>文章作者</span>
+			<span>文章发表时间</span>
+		</p>
+		<p>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落,换行了<br>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落,换行了<br>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落。</p>
+		<a href="javascript:;" title="img"></a>
+		<ul class="list_style">
+			<li>列表项目一</li>
+			<li>列表项目二</li>
+			<li>列表项目三</li>
+			<li>列表项目四</li>
+		</ul>
+		<figure>
+			<figcaption>图片</figcaption>
+			<p class="img_tit">
+				<span>好看的图片</span>
+				<a href="javascript:;" title="img"></a>
+			</p>
+			<p class="img_tit">
+				<span>好看的图片</span>
+				<a href="javascript:;" title="img"></a>
+			</p>
+			<p class="img_tit">
+				<span>好看的图片</span>
+				<a href="javascript:;" title="img"></a>
+			</p>
+			<p class="img_tit">
+				<span>好看的图片</span>
+				<a href="javascript:;" title="img"></a>
+			</p>
+			<p class="img_tit">
+				<span>好看的图片</span>
+				<a href="javascript:;" title="img"></a>
+			</p>
+			<p class="img_tit">
+				<span>好看的图片</span>
+				<a href="javascript:;" title="img"></a>
+			</p>
+			<p class="img_tit">
+				<span>好看的图片</span>
+				<a href="javascript:;" title="img"></a>
+			</p>
+		</figure>
+	</article>
+	<article class="art3">
+		<hgroup>
+			<h2>最后一篇文章一级标题</h2>
+			<h3>文章二级标题</h3>
+		</hgroup>
+		<p>
+			<span>文章作者</span>
+			<span>文章发表时间</span>
+		</p>
+		<div>
+			<div>
+				下面是一个表格
+			</div>
+			<table border="0" cellspacing="0" cellpadding="0">
+				<thead>
+					<tr>
+						<td>表头</td>
+						<td>表头</td>
+						<td>操作</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>表内容单元格</td>
+						<td>表内容单元格</td>
+						<td><a href="javascript:;" title="操作">操作</a></td>
+					</tr>
+					<tr>
+						<td>表内容单元格</td>
+						<td>表内容单元格</td>
+						<td><a href="javascript:;" title="操作">操作</a></td>
+					</tr>
+					<tr>
+						<td>表内容单元格</td>
+						<td>表内容单元格</td>
+						<td><a href="javascript:;" title="操作">操作</a></td>
+					</tr>
+					<tr>
+						<td>表内容单元格</td>
+						<td>表内容单元格</td>
+						<td><a href="javascript:;" title="操作">操作</a></td>
+					</tr>				
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>总计</td>
+						<td colspan="2">1000</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</article>
+	<footer>
+		<address>
+			版权所有©by 17khba
+		</address>
+	</footer>
+</body>
+</html>
