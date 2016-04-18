@@ -4,6 +4,376 @@
 	<meta charset="UTF-8">
 	<title>任务六：报纸排版</title>
 	<!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+	<style>
+		body {
+		  margin: 0;
+		  font: 16px 'Microsoft Yahei';
+		  line-height: 1.5;
+		  background-color: #dedede;
+		  box-sizing: border-box;
+		}
+		p,
+		h1,
+		h2,
+		h3 {
+		  margin: 0;
+		}
+		ul {
+		  padding: 0;
+		  margin: 0;
+		}
+		a {
+		  text-decoration: none;
+		}
+		dl,
+		dd {
+		  margin: 0;
+		}
+		img {
+		  display: block;
+		}
+		mark {
+		  background-color: #fff;
+		}
+		* {
+		  box-sizing: border-box;
+		}
+		.clearfix:after {
+		  content: '';
+		  display: block;
+		  clear: both;
+		}
+		.fl {
+		  float: left;
+		}
+		.fr {
+		  float: right;
+		}
+		.container {
+		  width: 980px;
+		  height: 1386px;
+		  padding: 0 44px;
+		  margin: 0 auto;
+		  background-color: #fff;
+		}
+		/* a,time公用部分 */
+		.a_time {
+		  display: inline-block;
+		  font: 12px '黑体';
+		  line-height: 20px;
+		  margin-top: 41px;
+		}
+		header {
+		  height: 63px;
+		  border-bottom: 2px solid #938e8c;
+		  margin-bottom: 34px;
+		}
+		header h1 {
+		  width: 110px;
+		  height: 61px;
+		  padding-left: 5px;
+		  background-color: #d45d5c;
+		}
+		header h1 a {
+		  display: inline-block;
+		  font: 12px '黑体';
+		  line-height: 20px;
+		  margin-top: 41px;
+		  color: #fff;
+		}
+		header time {
+		  display: inline-block;
+		  font: 12px '黑体';
+		  line-height: 20px;
+		  margin-top: 41px;
+		  color: #d45d5c;
+		}
+		.cont_top .nav_link {
+		  position: relative;
+		  width: 641px;
+		  height: 301px;
+		}
+		.cont_top .nav_link .mask {
+		  position: absolute;
+		  top: 0;
+		  width: 191px;
+		  height: 301px;
+		}
+		.cont_top .nav_link .mask_left {
+		  left: 0;
+		  background-color: rgba(73, 110, 54, 0.3);
+		}
+		.cont_top .nav_link .mask_right {
+		  right: 0;
+		  background-color: rgba(184, 107, 107, 0.3);
+		}
+		.cont_top aside {
+		  position: relative;
+		  width: 203px;
+		  height: 301px;
+		  padding: 10 0 0;
+		  border-top: 2px solid #938e8c;
+		}
+		.cont_top aside strong {
+		  display: block;
+		  font: oblique bold 116px 'Microsoft Yahei';
+		  margin-left: -20px;
+		  color: #75b86b;
+		}
+		.cont_top aside .version {
+		  position: relative;
+		  bottom: 12px;
+		  font: 55px 'Microsoft Yahei';
+		  color: #cc8091;
+		}
+		.cont_top aside .v_name {
+		  position: absolute;
+		  bottom: 12px;
+		  left: 90px;
+		  font: 21px 'Microsoft Yahei';
+		  color: #cc8091;
+		}
+		.cont_top aside .v_title {
+		  position: absolute;
+		  bottom: 0;
+		  left: 90px;
+		  font: 12px 'Microsoft Yahei';
+		  color: #bcbcbc;
+		}
+		.about span {
+		  display: block;
+		  font: 24px 'Microsoft Yahei';
+		  line-height: 40px;
+		  text-decoration: underline;
+		  text-transform: capitalize;
+		  font-variant: small-caps;
+		}
+		.about dd {
+		  font: 12px '楷体';
+		  line-height: 10px;
+		  color: #676767;
+		}
+		.top_cont {
+		  width: 641px;
+		  margin-top: 32px;
+		}
+		.top_cont dl {
+		  width: 30%;
+		  margin-right: 3%;
+		}
+		.top_cont dd {
+		  font: 12px '宋体';
+		  line-height: 16px;
+		  color: #767777;
+		}
+		.top_cont .list_dd {
+		  line-height: 20px;
+		}
+		.top_cont .list_tit {
+		  font: bold 16px 'Microsoft Yahei';
+		  text-decoration: underline;
+		  line-height: 36px;
+		}
+		.top_cont .tit1 {
+		  color: #418c59;
+		}
+		.top_cont .tit2 {
+		  color: #d2994f;
+		}
+		.top_cont .tit3 {
+		  color: #cc7680;
+		}
+		.top_cont .list_detail {
+		  margin-top: 20px;
+		}
+		.top_cont .list_detail span {
+		  display: block;
+		  font: 12px 'Microsoft Yahei';
+		  line-height: 16px;
+		  opacity: .7;
+		  color: #231815;
+		}
+		.top_cont .list_detail span i {
+		  color: #cd4a48;
+		}
+		.cont_bot {
+		  padding-bottom: 35px;
+		  border-bottom: 1px solid #ccc;
+		  margin-top: 65px;
+		}
+		.cont_bot article {
+		  width: 415px;
+		}
+		.cont_bot aside {
+		  width: 458px;
+		}
+		.cont_bot .hg {
+		  margin-bottom: 20px;
+		}
+		.cont_bot .hg h2 {
+		  font: bold 42px '黑体';
+		  color: #11456b;
+		  line-height: 16px;
+		  text-transform: uppercase;
+		}
+		.cont_bot .hg h3 {
+		  font: bold 32px '黑体';
+		  line-height: 64px;
+		  border-bottom: 2px solid #11456b;
+		  color: #11456b;
+		}
+		.cont_bot .hg mark {
+		  font: oblique bold 72px '黑体';
+		  padding: 0 20px;
+		  color: #f5e327;
+		}
+		.cont_bot p {
+		  font: 12px '宋体';
+		  line-height: 16px;
+		  color: #767777;
+		}
+		.cont_bot .first_letter {
+		  clear: both;
+		}
+		.cont_bot .first_letter:first-letter {
+		  float: left;
+		  font: 70px 'Microsoft Yahei';
+		  line-height: 70px;
+		  margin-right: 8px;
+		  color: #f5e327;
+		}
+		.cont_bot .first_letter img {
+		  margin: 10px 0;
+		}
+		.cont_bot .second_letter {
+		  text-indent: 25px;
+		}
+		.aside_img {
+		  position: relative;
+		  display: inline-block;
+		  width: 458px;
+		  height: 257px;
+		  margin-bottom: 22px;
+		}
+		.aside_img .aside_mask {
+		  position: absolute;
+		  bottom: 0;
+		  left: 0;
+		  width: 458px;
+		  height: 60px;
+		  background-color: rgba(0, 0, 0, 0.3);
+		}
+		.aside_img .aside_txt {
+		  position: absolute;
+		  bottom: 0;
+		  left: 0;
+		  width: 458px;
+		  height: 60px;
+		  padding: 8px 0 0 38px;
+		}
+		.aside_img .aside_txt p {
+		  display: inline-block;
+		  font: 26px 'Microsoft Yahei';
+		  line-height: 44px;
+		  padding: 0 6px 0 10px;
+		  border-left: 3px solid #72b16a;
+		  color: #fff;
+		}
+		.aside_img .aside_txt sub {
+		  font: oblique 12px 'Microsoft Yahei';
+		  letter-spacing: 140%;
+		  color: #72b16a;
+		}
+		.aside_cont {
+		  position: relative;
+		  width: 458px;
+		  height: 318px;
+		  padding: 20px 20px 0 25px;
+		  background-color: #eeedd6;
+		}
+		.aside_cont li {
+		  list-style: square inside url('../img/top_sj.png');
+		  font: 16px '宋体';
+		  line-height: 40px;
+		  text-align: center;
+		  color: #5a5b5b;
+		}
+		.aside_cont li i {
+		  display: inline-block;
+		  font: oblique 12px '宋体';
+		  text-align: right;
+		  line-height: 20px;
+		  color: #5a5b5b;
+		}
+		.aside_cont .mask {
+		  position: absolute;
+		  bottom: 0;
+		  left: 0;
+		  list-style: none;
+		  width: 260px;
+		  height: 160px;
+		  padding: 37px 10px;
+		  background-color: #d45d5c;
+		}
+		.aside_cont .mask .zero {
+		  height: 86px;
+		  font: 110px 'Microsoft Yahei';
+		  line-height: 86px;
+		  border-right: 2px solid #fff;
+		  color: #fff;
+		}
+		.aside_cont .mask .one {
+		  font: oblique 21px '黑体';
+		  line-height: 24px;
+		  text-align: left;
+		  padding-left: 10px;
+		  text-transform: uppercase;
+		  color: #fff;
+		}
+		.aside_cont .mask .two {
+		  width: 167px;
+		  font: 12px '黑体';
+		  line-height: 12px;
+		  text-align: left;
+		  padding-left: 10px;
+		  color: #fff;
+		  white-space: pre-wrap;
+		}
+		.aside_cont .cont {
+		  position: relative;
+		  bottom: -18px;
+		  height: 160px;
+		  list-style: none;
+		  font: oblique 14px '黑体';
+		  line-height: 16px;
+		  text-indent: 3em;
+		  text-align: left;
+		  padding: 32px 0 0 15px;
+		  margin-left: 235px;
+		  color: #5a5b5b;
+		}
+		.aside_cont .cont b:first-child {
+		  position: absolute;
+		  top: 38px;
+		  left: -66px;
+		  font: 72px '黑体';
+		  line-height: 36px;
+		  color: #d45d5c;
+		}
+		.aside_cont .cont b:last-child {
+		  position: absolute;
+		  bottom: -8px;
+		  right: -40px;
+		  font: 72px '黑体';
+		  line-height: 36px;
+		  color: #d45d5c;
+		}
+		footer span {
+		  font: 12px '黑体';
+		  line-height: 16px;
+		  color: #fcr;
+		}
+	</style>
 </head>
 <body>
 	<div class="container">
