@@ -4,7 +4,673 @@
 	<meta charset="UTF-8">
 	<title>task7:技术产品官网</title>
 	<!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
-	<style></style>
+	<style>
+		/* file reset */
+		body,
+		h1,
+		h2,
+		h3,
+		h4,
+		p {
+		  margin: 0;
+		}
+		ul {
+		  list-style: none;
+		  padding: 0;
+		  margin: 0;
+		}
+		a {
+		  text-decoration: none;
+		}
+		button {
+		  padding: 0;
+		  border: none;
+		}
+		img {
+		  display: block;
+		}
+		b,
+		strong {
+		  font-weight: normal;
+		}
+		i,
+		em {
+		  font-style: normal;
+		}
+		input {
+		  padding: 0;
+		  border: none;
+		  outline: none;
+		}
+		input:hover {
+		  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+		}
+		textarea:hover {
+		  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+		}
+		textarea {
+		  padding: 0;
+		  border: none;
+		  outline: none;
+		}
+		* {
+		  box-sizing: border-box;
+		  resize: none;
+		}
+		/* 自定义字体 */
+		@font-face {
+		  font-family: 'iconfont';
+		  src: url('http://at.alicdn.com/t/font_1461493227_8853498.eot');
+		  src: url('http://at.alicdn.com/t/font_1461493227_8853498.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('http://at.alicdn.com/t/font_1461493227_8853498.woff') format('woff'), /* chrome、firefox */ url('http://at.alicdn.com/t/font_1461493227_8853498.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('http://at.alicdn.com/t/font_1461493227_8853498.svg#iconfont') format('svg')
+		  
+		  /* IE9*/
+		  /* iOS 4.1- */
+		}
+		.iconfont {
+		  font-family: "iconfont" !important;
+		  font-size: 16px;
+		  font-style: normal;
+		  -webkit-font-smoothing: antialiased;
+		  -webkit-text-stroke-width: 0.2px;
+		  -moz-osx-font-smoothing: grayscale;
+		}
+		/* public style */
+		.clearfix:after {
+		  content: '';
+		  display: block;
+		  clear: both;
+		}
+		.fr {
+		  float: right;
+		}
+		.fl {
+		  float: left;
+		}
+		/* public less style */
+		.container {
+		  width: 100%;
+		  min-width: 1280px;
+		  margin: 0 auto;
+		}
+		/* ----------header---------- */
+		header .logo {
+		  font: 21px/56px '黑体';
+		  padding-left: 42px;
+		  margin-left: 60px;
+		  color: #393a3a;
+		  background: url(http://7xta55.com2.z0.glb.clouddn.com/logo.png) no-repeat left center;
+		  cursor: pointer;
+		}
+		header .user {
+		  font: 14px/56px 'Microsoft Yahei';
+		  padding-left: 18px;
+		  margin-right: 66px;
+		  color: #e74f4d;
+		  background: url(http://7xta55.com2.z0.glb.clouddn.com/user.png) no-repeat left center;
+		}
+		header nav {
+		  margin-right: 14px;
+		}
+		header nav a {
+		  font: 14px/51px 'Microsoft Yahei';
+		  line-height: 51px;
+		  padding: 0 17px;
+		  margin-right: 21px;
+		  color: #787b83;
+		}
+		header nav li.active > a {
+		  border-bottom: 5px solid #e25c60;
+		}
+		/* ----------banner---------- */
+		.banner .banner_bg {
+		  position: relative;
+		  height: 690px;
+		  background: url(http://7xta55.com2.z0.glb.clouddn.com/banner.png) no-repeat 0 -1px;
+		  background-size: cover;
+		}
+		.banner .banner_info {
+		  padding-bottom: 65px;
+		}
+		.banner_bg .banner_mask {
+		  position: absolute;
+		  width: 100%;
+		  height: 100%;
+		  background-color: rgba(0, 0, 0, 0.2);
+		}
+		.banner_bg .banner_cont {
+		  position: absolute;
+		  padding: 212px 0 0 117px;
+		}
+		.banner_bg .banner_cont h2 {
+		  font: bold 60px/90px 'Microsoft Yahei';
+		  color: #ffffff;
+		}
+		.banner_bg .banner_cont .banner_txt {
+		  font: 21px/32px 'Microsoft Yahei';
+		  padding-left: 7px;
+		  margin-top: 10px;
+		  color: #ffffff;
+		}
+		.banner_bg .banner_cont .banner_btn {
+		  display: inline-block;
+		  width: 330px;
+		  font: 30px/64px 'Microsoft Yahei';
+		  text-align: center;
+		  margin: 62px 0 0 9px;
+		  color: #ffffff;
+		  background-color: #e25c60;
+		  -webkit-transition: .3s;
+		          transition: .3s;
+		}
+		.banner_bg .banner_cont .banner_btn:active {
+		  color: #e25c60;
+		  background-color: #ffffff;
+		}
+		.banner_info li {
+		  width: 25%;
+		}
+		.banner_info .info_icon {
+		  height: 128px;
+		}
+		.banner_info .icon1 {
+		  background: url(http://7xta55.com2.z0.glb.clouddn.com/round.png) no-repeat center;
+		}
+		.banner_info .icon2 {
+		  background: url(http://7xta55.com2.z0.glb.clouddn.com/flag.png) no-repeat center;
+		}
+		.banner_info .icon3 {
+		  background: url(http://7xta55.com2.z0.glb.clouddn.com/flower.png) no-repeat center;
+		}
+		.banner_info .icon4 {
+		  background: url(http://7xta55.com2.z0.glb.clouddn.com/four_icon.png) no-repeat center;
+		}
+		.banner_info .info_txt {
+		  width: 100%;
+		  height: 52px;
+		  font: 14px/16px '黑体';
+		  padding: 0 78px;
+		  border-right: 2px solid #aaa;
+		  text-align: center;
+		  color: #b5b5b5;
+		}
+		.banner_info .last_child {
+		  border-right: none;
+		}
+		/* ----------activity---------- */
+		.activity .activity_about {
+		  height: 360px;
+		  padding-top: 42px;
+		  background-color: #ededec;
+		}
+		.activity .activity_info {
+		  height: 340px;
+		  text-align: center;
+		  padding-top: 19px;
+		  background: url(http://7xta55.com2.z0.glb.clouddn.com/search_bg.png) no-repeat center;
+		  background-size: cover;
+		}
+		.activity .activity_cont {
+		  height: 604px;
+		  text-align: center;
+		  background-color: #f7f7f7;
+		}
+		.activity_about h2 {
+		  height: 186px;
+		  background: url(http://7xta55.com2.z0.glb.clouddn.com/big_logo.png) no-repeat center;
+		}
+		.activity_about p {
+		  font: 54px/54px '黑体';
+		  text-align: center;
+		  color: #a0a1a1;
+		}
+		.activity_info h3 {
+		  position: relative;
+		  font: 21px/74px 'Microsoft Yahei';
+		  text-align: center;
+		  color: #ffffff;
+		}
+		.activity_info h3 span {
+		  display: block;
+		  font: 12px arial;
+		  text-align: center;
+		  margin-top: -15px;
+		}
+		.activity_info h3 span i {
+		  display: inline-block;
+		  width: 30px;
+		  border-top: 2px solid #fff;
+		  -webkit-transition: width .5s ease;
+		          transition: width .5s ease;
+		}
+		.activity_info h3:hover > span > i {
+		  width: 300px;
+		}
+		.activity_info .info_cont {
+		  text-align: center;
+		  font: 12px/12px 'Microsoft Yahei';
+		  margin-top: 10px;
+		  color: #ffffff;
+		}
+		.activity_info form {
+		  display: inline-block;
+		  margin-top: 52px;
+		}
+		.activity_info .select {
+		  position: relative;
+		  margin-right: 11px;
+		  display: inline-block;
+		}
+		.activity_info button {
+		  width: 236px;
+		  height: 36px;
+		  color: #ffffff;
+		  background-color: #e25c60;
+		}
+		.select:after {
+		  position: absolute;
+		  top: -5px;
+		  right: 4px;
+		  content: '\e605';
+		  font: 36px iconfont;
+		  color: #e25c60;
+		}
+		.select select {
+		  width: 236px;
+		  height: 36px;
+		  padding-left: 10px;
+		  color: #a8aaaa;
+		  -webkit-appearance: none;
+		  appearance: none;
+		  outline: none;
+		}
+		.select select:hover {
+		  border: 1px solid #e25c60;
+		}
+		.activity_cont .cont_pic {
+		  display: inline-block;
+		  padding-top: 100px;
+		}
+		.activity_cont .cont_pic li {
+		  margin-right: 36px;
+		}
+		.activity_cont a {
+		  padding: 12px 7px;
+		  border: 1px solid #e2e1e1;
+		  background-color: #fff;
+		}
+		.activity_cont h3 {
+		  font: 14px/30px 'Microsoft Yahei';
+		  color: #313232;
+		}
+		.activity_cont h3.top_h3 {
+		  max-width: 219px;
+		  font: 22px/30px 'Microsoft Yahei';
+		  text-align: center;
+		  letter-spacing: 24px;
+		  padding-left: 24px;
+		}
+		.activity_cont p {
+		  font: 12px/18px 'Microsoft Yahei';
+		  color: #aeaeae;
+		}
+		.activity_cont p.top_p {
+		  margin-bottom: 5px;
+		}
+		/* ----------info---------- */
+		.info .info_top {
+		  height: 566px;
+		}
+		.info .info_bot {
+		  height: 520px;
+		}
+		.info_top .top_left {
+		  position: relative;
+		  width: 66%;
+		  height: 100%;
+		  text-align: center;
+		  background: url(http://7xta55.com2.z0.glb.clouddn.com/info1.png) no-repeat center;
+		  background-size: cover;
+		}
+		.info_top .top_right {
+		  width: 34%;
+		  text-align: center;
+		  padding-top: 143px;
+		}
+		.top_left h3 {
+		  font: 50px/50px 'Microsoft Yahei';
+		  text-align: center;
+		  margin-top: 130px;
+		  color: #ffffff;
+		}
+		.top_left strong {
+		  display: block;
+		  text-align: center;
+		  text-transform: uppercase;
+		  font: 158px/158px 'Microsoft Yahei';
+		  color: #fff;
+		}
+		.top_left p {
+		  font: 22px/43px 'Microsoft Yahei';
+		  text-align: center;
+		  color: #ffffff;
+		}
+		.top_left p.left_place {
+		  margin-top: 16px;
+		}
+		.top_left i {
+		  position: absolute;
+		  top: 50%;
+		  right: 0;
+		  -webkit-transform: translate3d(0, -50%, 0);
+		          transform: translate3d(0, -50%, 0);
+		  width: 0;
+		  height: 0;
+		  border-width: 20px 30px;
+		  border-style: solid;
+		  border-color: transparent #ffffff transparent transparent;
+		}
+		.top_right li.list_cont {
+		  display: none;
+		}
+		.top_right li.active {
+		  display: block;
+		}
+		.top_right h3 {
+		  font: bold 20px/64px 'Microsoft Yahei';
+		  text-align: center;
+		  color: #333;
+		}
+		.top_right h3 b {
+		  font: bold 20px/64px '宋体';
+		  color: #e74f4d;
+		}
+		.top_right p {
+		  font: 12px/30px '宋体';
+		  text-align: center;
+		  color: #aaa;
+		}
+		.top_right a {
+		  display: inline-block;
+		  width: 106px;
+		  height: 33px;
+		  font: 12px/32px 'Microsoft Yahei';
+		  text-align: center;
+		  border: 1px solid #e25c60;
+		  margin-top: 41px;
+		  color: #e25c60;
+		  -webkit-transition: .3s;
+		          transition: .3s;
+		}
+		.top_right a:active {
+		  color: #ffffff;
+		  background-color: #e25c60;
+		}
+		.top_right .right_btn {
+		  display: inline-block;
+		  margin-top: 24px;
+		}
+		.top_right .right_btn li {
+		  width: 12px;
+		  height: 12px;
+		  border: 1px solid #929292;
+		  margin-right: 8px;
+		  border-radius: 50%;
+		  cursor: pointer;
+		}
+		.top_right .right_btn li:last-child {
+		  margin-right: 0;
+		}
+		.top_right .right_btn li.active {
+		  background-color: #929292;
+		}
+		.info_bot .bot_left {
+		  background-color: #e25c60;
+		}
+		.info_bot .bot_center {
+		  background-color: #ffffff;
+		}
+		.info_bot .bot_right {
+		  position: relative;
+		  width: 33.3%;
+		  height: 100%;
+		  background: url(http://7xta55.com2.z0.glb.clouddn.com/info2.png) no-repeat;
+		  background-size: cover;
+		}
+		.bot_left,
+		.bot_center {
+		  width: 33.3%;
+		  height: 100%;
+		  padding-top: 167px;
+		  text-align: center;
+		}
+		.bot_left h3,
+		.bot_center h3 {
+		  font: 21px/30px '黑体';
+		  color: #ffffff;
+		}
+		.bot_left p,
+		.bot_center p {
+		  margin-bottom: 25px;
+		  color: #ffffff;
+		}
+		.bot_left a,
+		.bot_center a {
+		  display: inline-block;
+		  width: 170px;
+		  height: 44px;
+		  font: 21px/44px '黑体';
+		  border: 1px solid #ffffff;
+		  color: #ffffff;
+		  -webkit-transition: .3s;
+		          transition: .3s;
+		}
+		.bot_left a:active,
+		.bot_center a:active {
+		  color: #999;
+		  background-color: #ffffff;
+		}
+		.bot_center h3 {
+		  color: #333;
+		}
+		.bot_center p {
+		  color: #ccc;
+		}
+		.bot_center a {
+		  color: #e25c60;
+		  border: 1px solid #e25c60;
+		}
+		.bot_center a:active {
+		  color: #ffffff;
+		  background-color: #e25c60;
+		}
+		.bot_right i {
+		  position: absolute;
+		  top: 50%;
+		  left: 0;
+		  -webkit-transform: translate3d(0, -50%, 0);
+		          transform: translate3d(0, -50%, 0);
+		  width: 0;
+		  height: 0;
+		  border-width: 20px 30px;
+		  border-style: solid;
+		  border-color: transparent transparent transparent #ffffff;
+		}
+		/* ----------joinUs---------- */
+		.joinUs {
+		  text-align: center;
+		  height: 749px;
+		  padding: 118px 0 165px 0;
+		}
+		.joinUs .join_top,
+		.joinUs .join_bot {
+		  text-align: center;
+		}
+		.join_top h3 {
+		  font: 21px/21px 'Microsoft Yahei';
+		  color: #333;
+		}
+		.join_top span {
+		  display: block;
+		  color: #e25c60;
+		}
+		.join_top p {
+		  font: 12px/18px '黑体';
+		  text-align: center;
+		  margin-top: 10px;
+		  color: #aaa;
+		}
+		.join_bot {
+		  display: inline-block;
+		  margin-top: 102px;
+		}
+		.join_bot aside {
+		  margin-right: 76px;
+		}
+		.join_bot aside .txt_detail {
+		  margin-bottom: 40px;
+		}
+		.join_bot aside h4 {
+		  font: bold 14px/20px '黑体';
+		  text-align: left;
+		  color: #333;
+		}
+		.join_bot aside p {
+		  font: 12px/21px '宋体';
+		  text-align: left;
+		  color: #d2d1d1;
+		}
+		.join_bot aside div.more {
+		  text-align: right;
+		}
+		.join_bot form.detail_list {
+		  display: inline-block;
+		}
+		.more a {
+		  font: 12px/21px '宋体';
+		  color: #a5a3a2;
+		}
+		.more a:before {
+		  content: '\e606';
+		  font: 12px iconfont;
+		  vertical-align: middle;
+		  margin-right: 6px;
+		}
+		.more a:hover {
+		  color: #e25c60;
+		}
+		.detail_list .row {
+		  margin-bottom: 14px;
+		}
+		.detail_list .row input[type="text"] {
+		  width: 312px;
+		  height: 42px;
+		  padding-left: 16px;
+		  margin-right: 16px;
+		  background-color: #ededef;
+		}
+		.detail_list .row input:last-child {
+		  margin-right: 0;
+		}
+		.detail_list .row input::-webkit-input-placeholder,
+		.detail_list .row textarea::-webkit-input-placeholder {
+		  color: #666;
+		}
+		.detail_list .row input::-moz-placeholder,
+		.detail_list .row textarea::-moz-placeholder {
+		  color: #666;
+		}
+		.detail_list .row input:-ms-input-placeholder,
+		.detail_list .row textarea:-ms-input-placeholder {
+		  color: #666;
+		}
+		.detail_list .row input::placeholder,
+		.detail_list .row textarea::placeholder {
+		  color: #666;
+		}
+		.detail_list .row textarea {
+		  width: 100%;
+		  height: 120px;
+		  padding: 8px 0 0 16px;
+		  background-color: #ededef;
+		}
+		.detail_list .row input[type="button"] {
+		  width: 100%;
+		  font: 14px/42px '黑体';
+		  background-color: #ededef;
+		  cursor: pointer;
+		}
+		.detail_list .row input[type="button"]:active {
+		  color: #ededef;
+		  background-color: #999;
+		}
+		/* ----------contack---------- */
+		.contack {
+		  height: 358px;
+		  text-align: center;
+		  padding-top: 82px;
+		  border-top: 1px solid #8c8e93;
+		  background-color: #32353e;
+		}
+		.contack h3 {
+		  font: 21px/37px '黑体';
+		  color: #ffffff;
+		}
+		.contack p {
+		  font: 12px/18px '黑体';
+		  color: #ffffff;
+		}
+		.contack .btn_email {
+		  font-size: 0;
+		  margin-top: 27px;
+		}
+		.contack .btn_email input[type="email"] {
+		  width: 430px;
+		  height: 42px;
+		  padding-left: 8px;
+		  border: 1px solid #989a9e;
+		  border-right: none;
+		}
+		.contack .btn_email input[type="submit"] {
+		  width: 79px;
+		  height: 42px;
+		  border: 1px solid #51535b;
+		  border-left: none;
+		  color: #ffffff;
+		  background-color: #6f7178;
+		  cursor: pointer;
+		}
+		.contack .btn_email input[type="submit"]:active {
+		  color: #333;
+		  background-color: #999;
+		}
+		.contack .contact_info {
+		  margin-top: 34px;
+		}
+		.contack .contact_info a {
+		  font: 32px iconfont;
+		  vertical-align: middle;
+		  margin-right: 12px;
+		  color: #ffffff;
+		}
+		.contack .contact_info a:hover {
+		  color: silver;
+		}
+		.contack .contact_info a:last-child {
+		  margin-right: 0;
+		}
+		/* ----------footer---------- */
+		footer {
+		  height: 58px;
+		  font: 12px/58px '宋体';
+		  padding: 0 98px 0 38px;
+		  color: #ffffff;
+		  background-color: #2f2f38;
+		}
+		footer a {
+		  color: #ffffff;
+		}
+
+	</style>
 </head>
 <body>
 	<div class="container">
