@@ -1,0 +1,64 @@
+body{margin: 0;}
+*{box-sizing: border-box;}
+
+$height: 50px;
+$pdValue: 10px;
+$bdWidth: 1px;
+$bdColor: #999;
+$bgColor: #eee;
+
+/* 清浮动 */
+@mixin clearfix{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+@mixin innerStyle{
+	height: $height;
+	border: $bdWidth solid $bdColor;
+	background-color: $bgColor;
+}
+
+@mixin outerStyle{
+	float: left;
+	padding: $pdValue;
+}
+
+@mixin generateGrid($tag){
+	@for $i from 1 through 12{
+		.col-#{$tag}-#{$i}{
+			width: (100% / 12 * $i);
+		}
+	}
+}
+
+.container{
+	width: 100%;
+	padding: $pdValue;
+}
+
+.container:after{
+	@include clearfix;
+}
+
+.outer{
+	@include outerStyle;
+}
+
+.inner{
+	@include innerStyle;
+}
+
+@media (min-width: 769px){
+	@include generateGrid('md');
+}
+
+@media (max-width: 768px){
+	@include generateGrid('sm');
+}
+
+
+
+
+
