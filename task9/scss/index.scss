@@ -1,0 +1,295 @@
+@import url(_reset.scss);
+@import url(_base.scss);
+
+$headBgc: #2189bf;
+$color: #fff;
+$hoverC: #D69092;
+$asideBgc: #2A2E3D;
+$asideC: #6e8095;
+$font_ht: '黑体';
+$font_st: '宋体';
+$font_ms: 'Microsoft Yahei';
+
+@mixin bgUrl($x: 0, $y: 0){
+	background: url(../img/sprite.png) no-repeat $x $y;
+}
+
+/* 头部部分 */
+.header{
+	position: relative;
+	min-width: 1280px;
+	height: 56px;
+	background-color: $headBgc;
+	>h1>a{
+		position: absolute;
+		top: 10px;
+		left: 50px;
+		width: 36px;
+		height: 36px;
+		background-color: #fff;
+		&:after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 15px;
+			height: 15px;
+			border: 3px solid $headBgc;
+			border-right: none;
+			border-bottom: none;
+		}
+	}
+	form{
+		position: absolute;
+		top: 15px;
+		right: 100px;
+		height: 28px;
+	}
+	.search_box{
+		position: relative;
+		margin-right: 21px;
+		input[type="search"]{
+			width: 314px;
+			height: 28px;
+			font: 12px $font_ms;
+			padding-left: 40px;
+			border-radius: 16px;
+		}
+		.search_icon{
+			position: absolute;
+			top: 5px;
+			left: 18px;
+			width: 17px;
+			height: 17px;
+			@include bgUrl(-41px, 0);
+			cursor: pointer;
+		}
+	}
+	.login>a{
+		height: 28px;
+		font: 12px/28px $font_ht;
+		padding-left: 18px;
+		color: $color;
+		@include bgUrl(-63px, 6px);
+		// background: url(../img/sprite.png) no-repeat -63px 6px;
+		&:hover{
+			color: $hoverC;
+			@include bgUrl(-135px, 6px);
+		// background: url(../img/sprite.png) no-repeat -135px 6px;
+		}
+	}
+}
+
+/* 主体内容部分 */
+.container{
+	position: absolute;
+	top: 56px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	>aside{
+		position: relative;
+		width: 260px;
+		height: 100%;
+		background-color: $asideBgc;
+	}
+	.cont{
+		position: relative;
+		height: 100%;
+		background-color: #eee;
+		overflow: hidden;
+	}
+}
+
+aside{
+	.top{
+		height: 150px;
+		padding: 18px 0 0 45px;
+		background-color: $asideBgc;
+	}
+	.user_logo{
+		padding: 3px;
+		border: 1px solid #b9babd;
+		border-radius: 50%;
+		margin-right: 19px;
+		background-color: $asideBgc;
+		>i{
+			width: 43px;
+			height: 43px;
+			border-radius: 50%;
+			background: url(../img/me.jpg) no-repeat;
+			background-size: cover;
+			transition: .3s all;
+		}
+		&:hover i{
+			transform: rotate(360deg);
+		}
+	}
+	.user_name{
+		height: 47px;
+		font: 16px/47px $font_ht;
+		color: $color;
+	}
+	.user_about{
+		.collect,
+		.fans{
+			width: 54px;
+			height: 75px;
+			padding: 20px 0;
+			text-align: center;
+		}
+		.line{
+			width: 1px;
+			height: 26px;
+			margin: 25px 15px 0 15px;
+			background-color: darken($asideC, 10%);
+		}
+	}
+	.collect,
+	.fans{
+		a,span{
+			display: inline-block;
+			color: $asideC;
+		}
+		a{
+			font: 16px $font_ht;
+			&:hover{
+				color: lighten($asideC, 30%);
+			}
+		}
+		span{
+			font: 12px $font_st;
+		}
+	}
+	.bottom{
+		position: absolute;
+		top: 150px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		overflow: hidden;
+		overflow-y: auto;
+	}
+	.list_item{
+		font: 12px/48px $font_ht;
+		padding-left: 45px;
+		color: $asideC;
+		&.active,
+		&:hover{
+			background-color: lighten($asideBgc, 10%);
+			cursor: pointer;
+		}
+		&:hover>span,
+		&.active>span{
+			color: lighten($asideC, 40%);
+		}
+		&>i{
+			display: inline-block;
+			width: 12px;
+			height: 11px;
+			margin-right: 11px;
+		}
+		&:first-child>i{
+			@include bgUrl(0, -41px);
+		}
+		&:nth-of-type(2)>i{
+			@include bgUrl(0, -58px);
+		}
+		&:nth-of-type(3)>i{
+			@include bgUrl(-17px, -58px);
+		}
+		&:nth-of-type(4)>i{
+			@include bgUrl(0, -58px);
+		}
+		&:nth-of-type(5)>i{
+			@include bgUrl(0, -58px);
+		}
+		&:last-child>i{
+			@include bgUrl(-33px, -58px);
+		}
+	}
+	.list_item2{
+		padding-bottom: 12px;
+	}
+	.item2{
+		font: 12px/14px $font_ht;
+		padding-left: 23px;
+		margin-bottom: 16px;
+		&:hover>span{
+			color: lighten($asideC, 40%);
+		}
+		&>b{
+			display: inline-block;
+			width: 7px;
+			height: 12px;
+			margin-right: 7px;
+			transition: .3s transform;
+		}
+		&>b{
+			@include bgUrl(-17px, -41px);
+		}
+		&:hover>b{
+			@include bgUrl(-28px, -40px);
+			transform: rotate(90deg);
+		}
+		&>i{
+			display: inline-block;
+			width: 12px;
+			height: 11px;
+			margin-right: 7px;
+		}
+		&>i{
+			@include bgUrl(-75px, -41px);
+		}
+		&:hover>i{
+			@include bgUrl(-92px, -41px);
+		}
+	}
+	.item2:last-child{
+		margin-bottom: 0;
+	}
+	.item3{
+		font: 12px/14px $font_ht;
+		padding-left: 33px;
+		margin-top: 16px;
+		&:hover>span{
+			color: lighten($asideC, 40%);
+		}
+		&>i{
+			display: inline-block;
+			width: 12px;
+			height: 11px;
+			margin-right: 7px;
+		}
+		&>i{
+			@include bgUrl(-109px, -41px);
+		}
+		&:hover>i{
+			@include bgUrl(-125px, -41px);
+		}
+	}
+}
+
+.cont{
+	nav{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 30px;
+		font: 12px/30px $font_ht;
+		color: #aaa;
+		padding-left: 29px;
+		background-color: #fff;
+		a{
+			display: inline-block;
+			font: 12px/30px $font_ht;
+			color: #aaa;
+		}
+		a:hover,
+		a.active{
+			color: #6898c2;
+		}
+	}
+}
