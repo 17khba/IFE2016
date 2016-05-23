@@ -2,8 +2,9 @@
 body,p,dl,dd,h1,h2,h3,h4,h5,h6{margin: 0;}
 ul,ol{padding: 0; margin: 0; list-style: none;}
 a{text-decoration: none;}
-a,input{outline: none;}
-input{padding: 0; border: none;}
+table{border-spacing: 0; border-collapse: inherit;}
+a,input,button{outline: none;}
+input,button{padding: 0; border: none; margin: 0;}
 i,em{font-style: normal;}
 b,strong{font-weight: normal;}
 img{display: block; border: none;}
