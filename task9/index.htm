@@ -20,7 +20,7 @@
 			</div>
 		</form>
 	</header>
-	<div class="container">
+	<div class="container clearfix">
 		<aside class="fl">
 			<div class="top">
 				<h2 class="user clearfix">
@@ -88,6 +88,645 @@
 				/
 				<a class="active" href="javascript:;">文档一</a>
 			</nav>
+			<div class="module">
+				<div class="module1">
+					<div class="project">
+						<span class="txt_left">查询项</span>
+						<input id="project" type="hidden" name="project">
+						<div class="pub_select clearfix">
+							第一项<i class="fr"></i>
+							<ul class="pub_list">
+								<li>第一项</li>
+								<li>第二项</li>
+							</ul>
+						</div>
+					</div>
+					<div class="exchange">
+						<div class="buy">
+							<span>买方</span>
+							<input id="buy" type="hidden" name="buy">
+							<div class="buy_select clearfix">
+								小A<i class="fr"></i>
+								<ul class="pub_list">
+									<li>小A</li>
+									<li>小B</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sell">
+							<span>卖方</span>
+							<input id="cell" type="hidden" name="cell">
+							<div class="cell_select clearfix">
+								小C<i class="fr"></i>
+								<ul class="pub_list">
+									<li>小C</li>
+									<li>小D</li>
+								</ul>
+							</div>
+						</div>
+						<div class="change_pic">
+							<span>换</span>
+						</div>
+					</div>
+					<div class="time">
+						<div class="time_one clearfix">
+							<p class="fl">
+								<span>日期</span>
+								<input type="date" name="date" value="2016-04-01">
+							</p>
+							<div class="fl">
+								<span>总耗时</span>
+								<input id="total_time" type="hidden" name="total_time">
+								<div class="time_select clearfix">
+									8天<i class="fr"></i>
+									<ul class="pub_list">
+										<li>15天</li>
+										<li>30天</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="time_two clearfix">
+							<div class="fl">
+								<span>人数</span>
+								<input id="num" type="hidden" name="num">
+								<div class="num_select clearfix">
+									10人<i class="fr"></i>
+									<ul class="pub_list">
+										<li>20人</li>
+										<li>30人</li>
+									</ul>
+								</div>
+							</div>
+							<div class="fl">
+								<span>成交项</span>
+								<input id="deal" type="hidden" name="deal">
+								<div class="deal_select clearfix">
+									10项<i class="fr"></i>
+									<ul class="pub_list">
+										<li>20项</li>
+										<li>30项</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<input type="button" name="search" value="搜索">
+				</div>
+				<div class="module2 clearfix">
+					<div class="mod2_cont">
+						<div class="left_icon">
+							<i></i>
+						</div>
+						<ul class="cont_list clearfix">
+							<li class="active list_cont fl">
+								<p class="cont_time">10:00 am</p>
+								<p class="cont_price">
+									<span>￥</span>
+									<b>1200</b>
+								</p>
+							</li>
+							<li class="list_cont fl">
+								<p class="cont_time">11:00 am</p>
+								<p class="cont_price">
+									<span>￥</span> 
+									<b>1300</b>
+								</p>
+							</li>
+							<li class="list_cont fl">
+								<p class="cont_time">12:00 am</p>
+								<p class="cont_price">
+									<span>￥</span>
+									<b>1400</b>
+								</p>
+							</li>
+							<li class="list_cont fl">
+								<p class="cont_time">01:00 am</p>
+								<p class="cont_price">
+									<span>￥</span>
+									<b>1500</b>
+								</p>
+							</li>
+							<li class="list_cont fl">
+								<p class="cont_time">02:00 am</p>
+								<p class="cont_price">
+									<span>￥</span>
+									<b>1600</b>
+								</p>
+							</li>
+							<li class="list_cont fl">
+								<p class="cont_time">03:00 am</p>
+								<p class="cont_price">
+									<span>￥</span>
+									<b>1700</b>
+								</p>
+							</li>
+						</ul>
+						<div class="right_icon">
+							<i></i>
+						</div>
+					</div>
+					<div class="history clearfix">
+						<i class="fl"></i>
+						<span class="fr">历史查询</span>
+					</div>
+				</div>
+				<div class="module3">
+					<h3 class="mod3_tit">2016年4月份统计</h3>
+					<ul class="mod3_list clearfix">
+						<li class="list_cont fl">
+							<p class="cont_num">133311</p>
+							<p class="cont_amount">成交量</p>
+							<span class="block"></span>
+						</li>
+						<li class="list_cont fl">
+							<p class="cont_num">133311</p>
+							<p class="cont_amount">成交量</p>
+							<span class="block"></span>
+						</li>
+						<li class="list_cont fl">
+							<p class="cont_num">133311</p>
+							<p class="cont_amount">成交量</p>
+							<span class="block"></span>
+						</li>
+						<li class="list_cont fl">
+							<p class="cont_num">133311</p>
+							<p class="cont_amount">成交量</p>
+							<span class="block"></span>
+						</li>
+					</ul>
+				</div>
+				<div class="module4 clearfix">
+					<section class="mod4_left fl">
+						<h3 class="left_tit">第一组项目</h3>
+						<div class="left_cont">
+							<nav class="cont_nav">
+								<ul class="nav_list clearfix">
+									<li class="active fl">
+										<a class="fl" href="javascript:;" title="">项目一</a>
+									</li>
+									<li class="fl">
+										<a class="fl" href="javascript:;" title="">项目一</a>
+									</li>
+									<li class="fl">
+										<a class="fl" href="javascript:;" title="">项目一</a>
+									</li>
+									<li class="fl">
+										<a class="fl" href="javascript:;" title="">项目一</a>
+									</li>
+									<li class="fl">
+										<a class="fl" href="javascript:;" title="">项目一</a>
+									</li>
+								</ul>
+							</nav>
+							<div class="cont_txt">
+								<ul class="cont_list clearfix">
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+									<li class="fl">购买材料一</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section class="mod4_right fl">
+						<h3 class="right_tit">第一组项目</h3>
+						<div class="right_cont clearfix">
+							<dl class="cont_tit"> 
+								<dt>标题</dt>
+								<dd>项目报表三</dd>
+							</dl>
+							<dl class="cont_price fl">
+								<dt>价格</dt>
+								<dd>￥158</dd>
+							</dl>
+							<dl class="cont_man fl">
+								<dt>负责人</dt>
+								<dd>小A</dd>
+							</dl>
+							<dl class="cont_detail">
+								<dt>详细描述</dt>
+								<dd>该项目目前负责人是...</dd>
+							</dl>
+							<dl class="cont_pact clearfix">
+								<dt class="fl">
+									<input class="pact_check" type="checkbox" name="pact" value="">
+									<i class="pact_icon"></i>
+									<span>遵守保密协议</span>
+								</dt>
+								<dd class="fr">
+									<input type="button" name="search" value="搜索" placeholder="">
+								</dd>
+							</dl>
+						</div>
+					</section>
+				</div>
+				<div class="module5 clearfix">
+					<section class="mod5_left fl">
+						<div class="left_cont">
+							<h3 class="cont_tit">日历</h3>
+							<ul class="cont_list clearfix">
+								<li class="fl">
+									<div class="list_cont">
+										<input id="input_year" type="hidden" name="year">
+										<div class="sel_year clearfix">
+											2016年<i class="fr"></i>
+											<ul class="pub_list">
+												<li>2015年</li>
+												<li>2014年</li>
+											</ul>
+										</div>
+									</div>
+
+								</li>
+								<li class="fl">
+									<div class="list_cont">
+										<input id="input_month" type="hidden" name="month" value="">
+										<div class="sel_month clearfix">
+											4月<i class="fr"></i>
+											<ul class="pub_list">
+												<li>3月</li>
+												<li>2月</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="fl">
+									<div class="list_cont">
+										<input type="hidden" name="date" value="">
+										<div class="sel_date clearfix">
+											标注日期<i class="fr"></i>
+											<ul class="pub_list">
+												<li>15日</li>
+												<li>14日</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="fl">
+									<input class="reset" type="reset" name="reset" value="返回今天">
+								</li>
+							</ul>
+							<div class="cont_txt">
+								<p class="txt_tit clearfix">
+									<span class="fl">一</span>
+									<span class="fl">二</span>
+									<span class="fl">三</span>
+									<span class="fl">四</span>
+									<span class="fl">五</span>
+									<span class="fl">六</span>
+									<span class="fl">日</span>
+								</p>
+								<ol class="calendar clearfix">
+									<li class="fl"></li>
+									<li class="fl"></li>
+									<li class="fl"></li>
+									<li class="fl"></li>
+									<li class="jr fl">
+										<div class="date_detail">
+											<b class="">1</b>
+											<p>愚人节</p>
+										</div>
+									</li>
+									<li class="zr fl">
+										<div class="date_detail">
+											<b class="">2</b>
+											<p>廿五</p>
+										</div>
+									</li>
+									<li class="zr fl">
+										<div class="date_detail">
+											<b class="">3</b>
+											<p>廿六</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">4</b>
+											<p>廿七</p>
+										</div>
+									</li>
+									<li class="jr fl">
+										<div class="date_detail">
+											<b class="">5</b>
+											<p>清明</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">6</b>
+											<p>廿九</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">7</b>
+											<p>三月</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">8</b>
+											<p>初二</p>
+										</div>
+									</li>
+									<li class="active zr fl">
+										<div class="date_detail">
+											<b class="">9</b>
+											<p>初三</p>
+										</div>
+									</li>
+									<li class="zr fl">
+										<div class="date_detail">
+											<b class="">10</b>
+											<p>初四</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">11</b>
+											<p>初五</p>
+										</div>
+									</li>
+									<li class="active fl">
+										<div class="date_detail">
+											<b class="">12</b>
+											<p>初六</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">13</b>
+											<p>初七</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">14</b>
+											<p>初八</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">15</b>
+											<p>初九</p>
+										</div>
+									</li>
+									<li class="zr fl">
+										<div class="date_detail">
+											<b class="">16</b>
+											<p>初十</p>
+										</div>
+									</li>
+									<li class="zr fl">
+										<div class="date_detail">
+											<b class="">17</b>
+											<p>十一</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">18</b>
+											<p>十二</p>
+										</div>
+									</li>
+									<li class="active fl">
+										<div class="date_detail">
+											<b class="">19</b>
+											<p>十三</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">20</b>
+											<p>十四</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">21</b>
+											<p>十五</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">22</b>
+											<p>十六</p>
+										</div>
+									</li>
+									<li class="zr fl">
+										<div class="date_detail">
+											<b class="">23</b>
+											<p>十七</p>
+										</div>
+									</li>
+									<li class="zr fl">
+										<div class="date_detail">
+											<b class="">24</b>
+											<p>十八</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">25</b>
+											<p>十九</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">26</b>
+											<p>廿十</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">27</b>
+											<p>廿一</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">28</b>
+											<p>廿二</p>
+										</div>
+									</li>
+									<li class="fl">
+										<div class="date_detail">
+											<b class="">29</b>
+											<p>廿三</p>
+										</div>
+									</li>
+									<li class="zr fl">
+										<div class="date_detail">
+											<b class="">30</b>
+											<p>廿四</p>
+										</div>
+									</li>
+									<li class="zr fl"></li>
+								</ol>
+							</div>
+						</div>
+					</section>
+					<section class="mod5_right fl">
+						<h3 class="cont_tit">汽车行业品牌榜</h3>
+						<div class="mod5_tab">
+							<table class="tab_txt">
+								<thead>
+									<tr>
+										<th>排名</th>
+										<th>品牌</th>
+										<th>
+											<span>搜索指数</span>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="num">1</td>
+										<td class="brand">大众</td>
+										<td class="index clearfix">
+											<span class="fl">48912001</span>
+											<div class="line_bar bar1 fl">
+												<span>
+													<b class="fl"></b>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="num">2</td>
+										<td class="brand">丰田</td>
+										<td class="index clearfix">
+											<span class="fl">48912001</span>
+											<div class="line_bar bar2 fl">
+												<span>
+													<b class="fl"></b>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="num">3</td>
+										<td class="brand">奥迪</td>
+										<td class="index clearfix">
+											<span class="fl">48912001</span>
+											<div class="line_bar bar3 fl">
+												<span>
+													<b class="fl"></b>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="num">4</td>
+										<td class="brand">本田</td>
+										<td class="index clearfix">
+											<span class="fl">48912001</span>
+											<div class="line_bar bar4 fl">
+												<span>
+													<b class="fl"></b>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="num">5</td>
+										<td class="brand">福特</td>
+										<td class="index clearfix">
+											<span class="fl">48912001</span>
+											<div class="line_bar bar4 fl">
+												<span>
+													<b class="fl"></b>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="num">6</td>
+										<td class="brand">宝马</td>
+										<td class="index clearfix">
+											<span class="fl">48912001</span>
+											<div class="line_bar bar4 fl">
+												<span>
+													<b class="fl"></b>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="num">7</td>
+										<td class="brand">现代</td>
+										<td class="index clearfix">
+											<span class="fl">48912001</span>
+											<div class="line_bar bar4 fl">
+												<span>
+													<b class="fl"></b>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="num">8</td>
+										<td class="brand">起亚</td>
+										<td class="index clearfix">
+											<span class="fl">48912001</span>
+											<div class="line_bar bar4 fl">
+												<span>
+													<b class="fl"></b>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="num">9</td>
+										<td class="brand">奔驰</td>
+										<td class="index clearfix">
+											<span class="fl">48912001</span>
+											<div class="line_bar bar4 fl">
+												<span>
+													<b class="fl"></b>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="num">10</td>
+										<td class="brand">别克</td>
+										<td class="index clearfix">
+											<span class="fl">48912001</span>
+											<div class="line_bar bar4 fl">
+												<span>
+													<b class="fl"></b>
+												</span>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
+				</div>
+			</div>
 		</section>
 	</div>
 </body>

@@ -54,7 +54,7 @@ textarea {
 @font-face {
   font-family: 'iconfont';
   src: url('http://at.alicdn.com/t/font_1461493227_8853498.eot');
-  src: url('http://at.alicdn.com/t/font_1461493227_8853498.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('http://at.alicdn.com/t/font_1461493227_8853498.woff') format('woff'), /* chrome、firefox */ url('http://at.alicdn.com/t/font_1461493227_8853498.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('http://at.alicdn.com/t/font_1461493227_8853498.svg#iconfont') format('svg')
+  src: url('http://at.alicdn.com/t/font_1461493227_8853498.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('http://at.alicdn.com/t/font_1461493227_8853498.woff') format('woff'), /* chrome、firefox */ url('http://at.alicdn.com/t/font_1461493227_8853498.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('http://at.alicdn.com/t/font_1461493227_8853498.svg#iconfont') format('svg');
   
   /* IE9*/
   /* iOS 4.1- */
@@ -152,8 +152,7 @@ header nav li.active > a {
   margin: 62px 0 0 9px;
   color: #ffffff;
   background-color: #e25c60;
-  -webkit-transition: .3s;
-          transition: .3s;
+  transition: .3s;
 }
 .banner_bg .banner_cont .banner_btn:active {
   color: #e25c60;
@@ -232,8 +231,7 @@ header nav li.active > a {
   display: inline-block;
   width: 30px;
   border-top: 2px solid #fff;
-  -webkit-transition: width .5s ease;
-          transition: width .5s ease;
+  transition: width .5s ease;
 }
 .activity_info h3:hover > span > i {
   width: 300px;
@@ -354,8 +352,7 @@ header nav li.active > a {
   position: absolute;
   top: 50%;
   right: 0;
-  -webkit-transform: translate3d(0, -50%, 0);
-          transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
   width: 0;
   height: 0;
   border-width: 20px 30px;
@@ -391,8 +388,7 @@ header nav li.active > a {
   border: 1px solid #e25c60;
   margin-top: 41px;
   color: #e25c60;
-  -webkit-transition: .3s;
-          transition: .3s;
+  transition: .3s;
 }
 .top_right a:active {
   color: #ffffff;
@@ -454,8 +450,7 @@ header nav li.active > a {
   font: 21px/44px '黑体';
   border: 1px solid #ffffff;
   color: #ffffff;
-  -webkit-transition: .3s;
-          transition: .3s;
+  transition: .3s;
 }
 .bot_left a:active,
 .bot_center a:active {
@@ -480,8 +475,7 @@ header nav li.active > a {
   position: absolute;
   top: 50%;
   left: 0;
-  -webkit-transform: translate3d(0, -50%, 0);
-          transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
   width: 0;
   height: 0;
   border-width: 20px 30px;
@@ -563,18 +557,6 @@ header nav li.active > a {
 }
 .detail_list .row input:last-child {
   margin-right: 0;
-}
-.detail_list .row input::-webkit-input-placeholder,
-.detail_list .row textarea::-webkit-input-placeholder {
-  color: #666;
-}
-.detail_list .row input::-moz-placeholder,
-.detail_list .row textarea::-moz-placeholder {
-  color: #666;
-}
-.detail_list .row input:-ms-input-placeholder,
-.detail_list .row textarea:-ms-input-placeholder {
-  color: #666;
 }
 .detail_list .row input::placeholder,
 .detail_list .row textarea::placeholder {
@@ -662,3 +644,4 @@ footer {
 footer a {
   color: #ffffff;
 }
+/*# sourceMappingURL=index.css.map */
