@@ -1,0 +1,39 @@
+body{padding: 0; margin: 0;}
+.flex{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 20px;
+	border: 1px solid gray;
+}
+.flex>div{
+	width: 150px;
+	border: 1px solid red;
+}
+.item1{
+	height: 120px;
+}
+.item2{
+	height: 100px;
+}
+.item3{
+	height: 40px;
+}
+.flex>.item4{
+	height: 200px;
+	border: 1px solid blue;
+}
+
+@media screen and (max-width: 640px) {
+	.flex{
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+	.flex>div{
+		margin-bottom: 20px;
+	}
+	.item4{
+		order: -1;
+	}
+}
