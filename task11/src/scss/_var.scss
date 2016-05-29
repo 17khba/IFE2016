@@ -1,0 +1,32 @@
+$color: #333;
+$subC: #666;
+$headC: #fff;
+$headBgC: #91d6d9;
+$bdC: #dedede;
+$mainBgC: #f8f8f8;
+$timeC: #c5c5c5;
+
+/*px2rem， 分为10等份 */
+@function size($size){
+	$width: 1000;
+	$scale: 10;
+	@return ($size / $width * $scale) * 1rem;
+}
+
+/* 为不同属性在不同dpr下设置不同的值 */
+@mixin data-dpr($field, $val){
+	[data-dpr="1"] & {
+		#{$field}: $val;
+	}
+	[data-dpr="2"] & {
+		#{$field}: $val * 2;
+	}
+	[data-dpr="3"] & {
+		#{$field}: $val * 3;
+	}
+}
+
+/* 不同dpr下设置不同的字体 */
+@mixin font-size($size){
+	@include data-dpr('font-size', $size);
+}
