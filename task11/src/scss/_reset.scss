@@ -1,0 +1,11 @@
+body,p,h1,h2,h3,h4,dl,dd{margin: 0;}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;}
+h1,h2,h3,h4,b,strong{font-weight: normal;}
+ul,ol{padding: 0; margin: 0; list-style: none;}
+i,em{font-style: normal;}
+a,button,input,textarea{
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+}
+a{text-decoration: none;}
+img{display: block;}
+*{box-sizing: border-box;}
