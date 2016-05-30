@@ -110,19 +110,12 @@ table tbody tr:nth-child(-n+3){
   background-color: rgba(255, 255, 255, .6);
 }
 
-#!/bin/sh
-git filter-branch --env-filter '
-OLD_EMAIL="635794628@qq.com"
-CORRECT_NAME="17khba"
-CORRECT_EMAIL="17khbaboy@gmail.com"
-if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
-then
-    export GIT_COMMITTER_NAME="$CORRECT_NAME"
-    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
-fi
-if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]
-then
-    export GIT_AUTHOR_NAME="$CORRECT_NAME"
-    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
-fi
-' --tag-name-filter cat -- --branches --tags
+$ git push -u origin master
+To https://github.com/17khba/IFE2016.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/17khba/IFE2016.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
