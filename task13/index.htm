@@ -19,6 +19,30 @@
   在事件处理函数中
   获取aqi-input输入的值，并显示在aqi-display中
   */
+  var $ = function(ele){
+        return document.getElementById(ele);
+      };
+
+  function handle(){
+    var oTxt = parseInt($('aqi-input').value);
+    if(!isNaN(oTxt) & oTxt >= 0 & oTxt <= 1000){
+      $("aqi-display").innerHTML = oTxt;
+    } else{
+      alert('请输入1-1000内的值！');
+    }
+  }
+
+  $('button').onclick = function(){
+    handle();
+  };
+
+  $('aqi-input').onkeyup = function(e){
+    if(e.keyCode == 13){
+      handle();
+    }
+  };
+
+
   
   
 })();
