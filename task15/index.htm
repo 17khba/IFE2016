@@ -37,7 +37,7 @@
 function $(ele){
 
   return document.getElementById(ele);
-  
+
 }
 
 function getData() {
@@ -95,11 +95,9 @@ function render(data) {
   var str = '',
       arr = ['一', '二', '三', '四', '五', '六', '七'];
 
-  for (var i = 0; i < data.length; i++) {
-
-    str += `<li>第${arr[i]}名：${data[i][0]}空气质量:<b>${data[i][1]}</b></li>`;
-
-  }
+  data.forEach( function(element, index) {
+    str += `<li>第${arr[index]}名：${element[0]}空气质量:<b>${element[1]}</b></li>`;
+  });
 
   $('resort').innerHTML = str;
 
@@ -110,6 +108,7 @@ function btnHandle() {
   var aqiData = getData();
   aqiData = sortAqiData(aqiData);
   render(aqiData);
+  $('sort-btn').disabled = true;
 
 }
 
