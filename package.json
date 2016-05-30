@@ -1,0 +1,22 @@
+{
+  "name": "ife",
+  "version": "1.0.0",
+  "description": "训练题-记录自己的成长！",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/17khba/IFE2016.git"
+  },
+  "keywords": [
+    "'IFE'"
+  ],
+  "author": "635794628@qq.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/17khba/IFE2016/issues"
+  },
+  "homepage": "https://github.com/17khba/IFE2016#readme"
+}
