@@ -28,47 +28,43 @@ var queue = {
 		return /^\d+$/.test(str);
 	},
 
-	/*左入*/
-	leftPush: function(){
+	pushPublic: function(fn){
 		var num = oInp.value;
-		console.dir(this);
 		if(this.validate(num)){
-			this.str.unshift(num);
+			fn.call(this.str, num);
 			this.render();
 		} else{
 			alert('请输入要添加的值！');
 		}
 	},
+	
+	/*左入*/
+	leftPush: function(){
+		this.pushPublic([].unshift);
+	},
 
 	/*右入*/
 	rightPush: function(){
-		var num = oInp.value;
-		if(this.validate(num)){
-			this.str.push(num);
+		this.pushPublic([].push);
+	},
+
+	outPublic: function(fn){
+		if(this.str.length){
+			alert(fn.call(this.str));
 			this.render();
 		} else{
-			alert('请输入要添加的值！');
+			alert('没有可以删除的元素！');
 		}
 	},
 
 	/*左出*/
 	leftShift: function(){
-		if(this.str[0]){
-			alert(this.str.shift());
-			this.render();
-		} else{
-			alert('没有可以删除的元素！');
-		}
+		this.outPublic([].shift);
 	},
 
 	/*右出*/
 	rightPop: function(){
-		if(this.str[this.str.length - 1]){
-			alert(this.str.pop());
-			this.render();
-		} else{
-			alert('没有可以删除的元素！');
-		}
+		this.outPublic([].pop);
 	},
 
 	/*渲染函数*/
