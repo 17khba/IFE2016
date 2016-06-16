@@ -62,6 +62,9 @@ input,textarea{
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+.hobbyBox>span:hover{
+	background-color: #02DEF2;
+}
 #btn{
 	font: 14px/50px 'Microsoft Yahei';
 	text-align: center;
