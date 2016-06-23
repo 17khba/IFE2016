@@ -1,0 +1,44 @@
+body{
+	font-size: 0;
+	margin: 0;
+}
+*{
+	box-sizing: border-box;
+}
+.btns{
+	display: table;
+	width: 844px;
+	text-align: center;
+	padding: 5px;
+	border: 1px solid #fff;
+	margin: 150px auto 0;
+	box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+}
+.btns>div{
+	display: table-cell;
+	vertical-align: middle;
+	border: none;
+}
+.btns>div input{
+	margin: 10px;
+}
+div{
+	display: inline-block;
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+.one{
+	display: block;
+	width: 834px;
+	border: 1px solid #fff;
+	margin: 50px auto;
+	box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+}
+.four{
+	width: 50px;
+	height: 80px;
+	padding: 0;
+	background-color: #f2f2f2;
+}
