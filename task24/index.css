@@ -1,0 +1,49 @@
+body{
+	font: 14px/24px 'Microsoft Yahei';
+	margin: 0;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+div{
+	float: left;
+}
+div{
+	padding: 10px;
+	border: 1px solid #fff;
+	margin: 5px;
+	background-color: #BDF5E8;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+#one{
+	float: none;
+	display: block;
+	width: 1384px;
+	margin: 60px auto;
+}
+#one:before,
+#one:after{
+	content: '';
+	display: table;
+}
+#one:after{
+	clear: both;
+}
+.btns{
+	width: 590px;
+	margin: 0 auto;
+}
+.found{
+	color: #fff;
+	background-color: #FF5757;
+}
+.active{
+	color: #fff;
+	background-color: #00F3F3;
+}
+.default{
+	color: #000;
+	background-color: #BDF5E8;
+}
