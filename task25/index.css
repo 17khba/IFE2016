@@ -1,0 +1,70 @@
+body,p{margin: 0;}
+body{
+	font: 12px/1.5 'Microsoft Yahei';
+}
+fieldset{
+	width: 300px;
+	margin: 10px auto;
+}
+#searchTxt{
+	padding-left: 6px;
+}
+#result{
+	height: 24px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 24px;
+}
+.nodebody-visible{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin: 4px 16px;
+}
+.nodebody-hidden{
+	display: none;
+}
+.arrow{
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-right: 6px;
+	cursor: pointer;
+}
+.down-arrow{
+	border-top: 10px solid #ccc;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+}
+.right-arrow{
+	border-left: 10px solid #ccc;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+}
+.node-title{
+	font-size: 14px;
+	color: #449BDE;
+	cursor: pointer;
+}
+.node-title:hover{
+	color: #FF8642;
+}
+.highlight{
+	font-weight: bold;
+	color: #FF5F57;
+}
+.addIcon,
+.deleteIcon{
+	display: none;
+	vertical-align: bottom;
+	cursor: pointer;
+}
+.node-header:hover .addIcon,
+.node-header:hover .deleteIcon{
+	display: inline;
+}

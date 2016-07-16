@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>树形组件</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<fieldset>
+	<legend>树状折叠</legend>
+	<input type="text" id="searchTxt">
+	<button id="search" type="button">搜索</button>
+	<button id="clear" type="button">清空</button>
+	<p id="result"></p>
+	<div id="tree-area">
+		<div class="nodebody-visible">
+			<label class="node-header">
+				<div class="arrow empty-arrow"></div>
+				<span class="node-title">前端攻城狮</span>
+				<span>&nbsp;&nbsp;</span>
+				<img class="addIcon" src="img/add.png" alt="">
+			</label>
+		</div>
+	</div>
+</fieldset>
+	<script src="index.js"></script>
+</body>
+</html>
