@@ -369,12 +369,15 @@ addEvent(document.querySelector('#search'), 'click', function(){
 		return;
 	} else{
 		var oNode, i;
+
+		document.querySelector('#result').textContent = '匹配到' + resultList.length + '个符合条件的节点';
+
 		for (i = 0; i < resultList.length; i++) {
 			oNode = resultList[i];
 			oNode.render(false, false, true, false);
 			while(oNode.parent !== null){
 				/*折叠状态时才执行展开操作，否则跳过*/
-				if(oNode.parent.selfElement.className === 'nodebody-hidden'){
+				if(oNode.selfElement.className === 'nodebody-hidden'){
 					oNode.parent.toggleFold();
 				}
 				oNode = oNode.parent;
@@ -384,7 +387,7 @@ addEvent(document.querySelector('#search'), 'click', function(){
 });
 
 addEvent(document.querySelector('#clear'), 'click', function(){
-	document.querySelector('#searchTtx').value = '';
+	document.querySelector('#searchTxt').value = '';
 	document.querySelector('#result').textContent = '';
 	root.search(null);
 });
