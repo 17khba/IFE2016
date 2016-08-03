@@ -1,4 +1,4 @@
-var screenWidth, screenHeight, shipWidth, charge_rate, discharge_rate;
+var screenWidth, screenHeight, shipWidth, charge_rate, discharge_rate, planetRadiu, powerBar_pos_offset, powerBar_width, powerBar_good, powerBar_medium, powerBar_bad;
 
 screenWidth = 800;					//画布宽高
 screenHeight = 800;
@@ -11,7 +11,7 @@ discharge_rate = 0.2;				//掉电速度
 planetRadiu = 50;					//星球半径
 
 powerBar_pos_offset = 5;			//电量条便宜位置
-powerBra_width = 5;					//电量条宽度
+powerBar_width = 5;					//电量条宽度
 powerBar_good = '#7DE8B7';			//电量充足时的颜色
 powerBar_medium = '#FFB22E';		//电量一般时的颜色
 powerBar_bad = '#FF3900';			//电量不足时的颜色
@@ -246,7 +246,7 @@ var Mediator = function(){
 		remove: function( obj ){
 			if( obj instanceof Spaceship ){
 				ConsoleMs.show( 'Destory spaceship success.' );
-				delete this.spaceships[ obj.id ];
+				delete spaceships[ obj.id ];
 				return false;
 			}
 			ConsoleMs.show( 'Destory spaceship success.' );
@@ -373,7 +373,7 @@ var AnimTool = ( function(){
 					_ctx.strokeStyle = powerBar_bad;
 				}
 
-				_ctx.lineWidth = powerBra_width;
+				_ctx.lineWidth = powerBar_width;
 				_ctx.moveTo( spaceship.orbit, -powerBar_pos_offset);
 				_ctx.lineTo( spaceship.orbit + shipWidth * ( spaceship.power / 100 ), -powerBar_pos_offset );
 				_ctx.stroke();
