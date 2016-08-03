@@ -1,0 +1,70 @@
+@import '_normalize';
+@import 'mixin/_clearfix';
+
+body{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	font-family: arial;
+}
+.container{
+	width: 1100px;
+	height: 100%;
+	border: 1px solid #dbdbdb;
+	margin: 0 auto;
+	.console{
+		width: 25%;
+		height: 100%;
+		padding: 10px;
+		overflow: hidden;
+		overflow-y: scroll;
+	}
+	.planetPad{
+		width: 75%;
+	}
+}
+
+.console{
+	>h3{
+		text-align: center;
+	}
+	>ul{
+		font-size: 14px;
+		padding-left: 30px;
+		margin: 10px 0;
+	}
+}
+.planetPad{
+	position: relative;
+	.screen,
+	.planet{
+		position: absolute;
+	}
+	.planet{
+		z-index: 999;
+	}
+	.list{
+		position: absolute;
+		top: 767px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		>fieldset{
+			padding-top: 10px;
+		}
+	}
+	.control-item{
+		padding-left: 50px;
+		button{
+			margin: 0 5px;
+		}
+	}
+	.control-txt{
+		display: inline-block;
+		width: 135px;
+		margin-bottom: 15px;
+	}
+}
+
