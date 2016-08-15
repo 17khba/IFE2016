@@ -23,6 +23,7 @@ body{
 	text-align: right;
 }
 .prompt{
+	display: none;
 	position: absolute;
 	font: 12px/18px 'Microsoft Yahei';
 	padding-left: 32%;
