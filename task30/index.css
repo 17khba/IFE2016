@@ -1,0 +1,29 @@
+*{
+	box-sizing: border-box;
+}
+p{
+	margin: 0;
+}
+body{
+	margin: 0;
+	font: 14px/24px 'Microsoft Yahei';
+}
+.form{
+	width: 250px;
+	text-align: right;
+	margin: 200px auto;
+}
+.box{
+	position: relative;
+	padding-bottom: 25px;
+}
+.box [class*=lab] span{
+	display: inline-block;
+	width: 28%;
+	text-align: right;
+}
+.prompt{
+	position: absolute;
+	font: 12px/18px 'Microsoft Yahei';
+	padding-left: 32%;
+}
