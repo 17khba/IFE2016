@@ -105,7 +105,7 @@ function regValue( id, item ){
 			pass = /^\S{4,16}$/.test( val );
 			break;
 		case 2:
-			pass = !val ?  false : ( document.querySelector( '#pw' ).value == val );
+			pass = !val ? false : ( document.querySelector( '#pw' ).value == val );
 			break;
 		case 3:
 			pass = /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/.test( val );
