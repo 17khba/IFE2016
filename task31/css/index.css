@@ -1,0 +1,49 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	font: 14px/24px 'Microsoft Yahei';
+	margin: 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.container{
+	width: 600px;
+	margin: 100px auto;
+}
+.linkage-top{
+	font: 18px/32px 'Microsoft Yahei';
+	padding: 0 100px 0;
+	margin-bottom: 40px;
+}
+.in-lab{
+	margin: 0 50px;
+}
+.linkage-bot1 select{
+	width: 200px;
+	height: 25px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba( 0, 0, 0, .075 );
+	outline: none;
+}
+.linkage-tit{
+	font: 16px/22px 'Microsoft Yahei';
+	margin-right: 10px;
+}
+[name=city]{
+	margin-right: 100px;
+}
+.linkage-bot2 input{
+	width: 200px;
+	height: 25px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba( 0, 0, 0, .075 );
+	outline: none;
+}
+.hide{
+	display: none;
+}
