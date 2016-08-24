@@ -25,6 +25,7 @@ var createTag = (function(){
 		 * num记录输入值的个数，不能大于10;
 		 * num为私有变量，外部无法访问；
 		 */
+		 console.log(input);
 		var num;
 
 		this.getNumber = function(){
