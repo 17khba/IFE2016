@@ -461,5 +461,6 @@ window.onload = function(){
 	btnListener( commander );				//按钮监听
 	AnimTool.setMediator( mediator );		//给工具安装喇叭，用于获取spaceships数组数据渲染动画
 	AnimTool.animLoop();					//动画循环
+	console.log($(document).height());
 };
 
