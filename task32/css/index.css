@@ -1,0 +1,62 @@
+*{ box-sizing: border-box;}
+td{padding: 0;}
+body{
+    font: 14px/24px 'Microsoft Yahei';
+    margin: 0;
+}
+.tb{
+    width: 464px;
+    margin: 200px auto 0;
+    border-spacing: 0;
+}
+.list{
+    width: 464px;
+    text-align: center;
+    margin: 30px auto 0;
+}
+.item td{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+.item:nth-child(n+2)>td:nth-child(n+2){
+    border: 1px solid #dbdbdb;
+}
+.top,
+.right,
+.bottom,
+.left{
+    position: relative;
+    background-color: #00E3B0;
+}
+.tb div{
+    transition: top .2s ease-in-out, right .2s ease-in-out, bottom .2s ease-in-out, left .2s ease-in-out;
+}
+.top>div,
+.bottom>div{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: 0;
+    background-color: #5E75D2;
+}
+.top>div{
+    top: 10px;
+}
+.bottom>div{
+    top: 0;
+}
+.right>div,
+.left>div{
+    position: absolute;
+    top: 0px;
+    width: 30px;
+    height: 38px;
+    background-color: #5E75D2;
+}
+.right>div{
+    left: 0;
+}
+.left>div{
+    left: 10px;
+}
