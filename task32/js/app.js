@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+// import 'babel-polyfill';
 /* 选择器方法*/
 const $ = selector => document.querySelector(selector);
 

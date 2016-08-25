@@ -1,7 +1,6 @@
 'use strict';
 
-require('babel-polyfill');
-
+// import 'babel-polyfill';
 /* 选择器方法*/
 var $ = function $(selector) {
     return document.querySelector(selector);
