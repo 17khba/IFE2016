@@ -88,7 +88,7 @@ var go = function go() {
 };
 
 var run = function run() {
-    var txtVal = txt.value.trim().toLowerCase().replace(/\s/, '');
+    var txtVal = txt.value.trim().toLowerCase().replace(/\s/g, '');
     switch (txtVal) {
         case 'go':
             go();

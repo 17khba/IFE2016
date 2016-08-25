@@ -75,7 +75,7 @@ const go = () => {
 };
 
 const run = function () {
-    const txtVal = txt.value.trim().toLowerCase().replace(/\s/, '');
+    const txtVal = txt.value.trim().toLowerCase().replace(/\s/g, '');
     switch (txtVal) {
     case 'go':
         go();
