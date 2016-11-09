@@ -20,11 +20,12 @@ const direction = ['top', 'right', 'bottom', 'left'];
 /* 获取当前元素*/
 const getPos = (x, y) => tb.rows[x].cells[y];
 
+/* 通过类名定位当前td方向*/
+const setDir = (obj, direction) => obj.className = direction;
+
+/*生成小方块元素*/
 const setDiv = ele =>  ele.innerHTML = `<div></div>`;
 const clearDiv = ele => ele.innerHTML = '';
-
-/* 通过类名的方式调整方向*/
-const setDir = (obj, direction) => obj.className = direction;
 
 /* 默认位置信息*/
 const pos = {
@@ -36,7 +37,7 @@ const pos = {
 
 /* 调整默认方向*/
 const changeDir = num => {
-    pos.dir = (pos.dir + num < 0 ? 3 : pos.dir + 1) % 4;
+    pos.dir = pos.dir + num > 0 ? 3 : pos.dir + 1 % 4;
     setDir(pos.currentEle, direction[pos.dir]);
 };
 

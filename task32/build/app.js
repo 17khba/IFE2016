@@ -1,60 +1,47 @@
-'use strict';
-
 // import 'babel-polyfill';
 /* 选择器方法*/
-var $ = function $(selector) {
-    return document.querySelector(selector);
-};
+const $ = selector => document.querySelector(selector);
 
 /* 事件绑定兼容*/
-var on = function on(ele, event, fn) {
+const on = (ele, event, fn) => {
     if (ele.addEventListener) {
         ele.addEventListener(event, fn, false);
     } else if (ele.attachEvent) {
-        ele.attachEvent('on' + event, fn);
+        ele.attachEvent(`on${event}`, fn);
     } else {
-        ele['on' + event] = fn;
+        ele[`on${event}`] = fn;
     }
 };
 
-var tb = $('.tb').tBodies[0];
-var txt = $('.txt');
-var btn = $('.btn');
-
-var direction = ['top', 'right', 'bottom', 'left'];
+const tb = $('.tb').tBodies[0];
+const [txt, btn] = [$('.txt'), $('.btn')];
+const direction = ['top', 'right', 'bottom', 'left'];
 
 /* 获取当前元素*/
-var getPos = function getPos(x, y) {
-    return tb.rows[x].cells[y];
-};
+const getPos = (x, y) => tb.rows[x].cells[y];
 
-var setDiv = function setDiv(ele) {
-    return ele.innerHTML = '<div></div>';
-};
-var clearDiv = function clearDiv(ele) {
-    return ele.innerHTML = '';
-};
+const setDiv = ele =>  ele.innerHTML = `<div></div>`;
+const clearDiv = ele => ele.innerHTML = '';
 
 /* 通过类名的方式调整方向*/
-var setDir = function setDir(obj, direction) {
-    return obj.className = direction;
-};
+const setDir = (obj, direction) => obj.className = direction;
 
 /* 默认位置信息*/
-var pos = {
-    currentEle: getPos(5, 5), // 当前元素
-    dir: 3, // 当前方向
-    x: 5, // 当前行号
-    y: 5 };
+const pos = {
+    currentEle: getPos(5, 5),       // 当前元素
+    dir: 3,                         // 当前方向
+    x: 5,                           // 当前行号
+    y: 5,                           // 当前列号
+};
 
 /* 调整默认方向*/
-var changeDir = function changeDir(num) {
-    pos.dir = (pos.dir + num < 0 ? 3 : pos.dir + 1) % 4;
+const changeDir = num => {
+    pos.dir = (pos.dir + num >= 0 ? pos.dir + num : 3 ) % 4;
     setDir(pos.currentEle, direction[pos.dir]);
 };
 
 /* 初始化*/
-var init = function init(_currentEle) {
+const init = _currentEle => {
     setDir(pos.currentEle, '');
     clearDiv(pos.currentEle);
     setDir(_currentEle, direction[pos.dir]);
@@ -62,15 +49,15 @@ var init = function init(_currentEle) {
     pos.currentEle = _currentEle;
 };
 
-var goPublic = function goPublic(str, num) {
-    if (pos[str] <= 1) return;
-    if (pos[str] > 1) pos[str] = pos[str] + num;
-    var _currentEle = getPos(pos.x, pos.y);
+const goPublic = (str, num) => {
+    if(pos[str] <= 1) return;
+    if(pos[str] > 1) pos[str] = pos[str] + num;
+    const _currentEle = getPos(pos.x, pos.y);
     init(_currentEle);
 };
 
-var go = function go() {
-    var _className = pos.currentEle.className;
+const go = () => {
+    const _className = pos.currentEle.className;
     switch (_className) {
         case 'top':
             goPublic('x', -1);
@@ -87,27 +74,26 @@ var go = function go() {
     }
 };
 
-var run = function run() {
-    var txtVal = txt.value.trim().toLowerCase().replace(/\s/g, '');
+const run = function () {
+    const txtVal = txt.value.trim().toLowerCase().replace(/\s/g, '');
     switch (txtVal) {
-        case 'go':
-            go();
-            break;
-        case 'tunlef':
-            changeDir(1);
-            break;
-        case 'tunrig':
-            changeDir(-1);
-            break;
-        case 'tunbak':
-            changeDir(2);
-            break;
-        default:
-            break;
+    case 'go':
+        go();
+        break;
+    case 'tunlef':
+        changeDir(-1);
+        break;
+    case 'tunrig':
+        changeDir(1);
+        break;
+    case 'tunbak':
+        changeDir(2);
+        break;
+    default:
+        break;
     }
 };
 
 setDir(pos.currentEle, 'left');
 setDiv(pos.currentEle);
 on(btn, 'click', run);
-//# sourceMappingURL=app.js.map

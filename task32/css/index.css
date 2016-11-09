@@ -1,12 +1,13 @@
 *{ box-sizing: border-box;}
 td{padding: 0;}
+mark{margin-right: 15px;}
 body{
     font: 14px/24px 'Microsoft Yahei';
     margin: 0;
 }
 .tb{
     width: 464px;
-    margin: 200px auto 0;
+    margin: 120px auto 0;
     border-spacing: 0;
 }
 .list{
