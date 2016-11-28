@@ -82,6 +82,7 @@
 
 		// 创建当前元素
 		function _createEle(config) {
+			
 			var current;
 			current = document.createElement('div');
 			current.className = 'active';
