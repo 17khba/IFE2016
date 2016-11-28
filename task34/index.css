@@ -1,0 +1,50 @@
+mark{
+	margin-right: 5px;
+}
+
+.wrap{
+	position: relative;
+	border: 2px solid #000;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.box{
+	float: left;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #dbdbdb;
+	border-top: none;
+	border-left: none;
+}
+
+.non-bot{
+	border-bottom: none;
+}
+.non-rig{
+	border-right: none;
+}
+
+.active{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-top: 4px solid #20EABD;
+	background-color: #5A93E2;
+	box-sizing: border-box;
+	transition: all 1s ease-out;
+}
+
+.inp-txt{
+	width: 100px;
+	border-radius: 4px;
+	padding: 0;
+	padding-left: 8px;
+	border: 1px solid #999;
+	margin: 0;
+	background-color: #f2f2f2;
+	outline: none;
+}
+.inp-txt:focus{
+	background-color: #fff;
+}
