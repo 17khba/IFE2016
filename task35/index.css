@@ -1,0 +1,86 @@
+.clearfix:before,
+.clearfix:after{
+	content: '';
+	display: table;
+}
+.clearfix:after{
+	clear: both;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+mark{
+	margin-right: 5px;
+}
+
+.wrap{
+	position: relative;
+	border: 2px solid #000;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.box{
+	float: left;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #dbdbdb;
+	border-top: none;
+	border-left: none;
+}
+
+.non-bot{
+	border-bottom: none;
+}
+.non-rig{
+	border-right: none;
+}
+
+.active{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-top: 4px solid #20EABD;
+	background-color: #5A93E2;
+	box-sizing: border-box;
+	transition: all 1s ease-out;
+}
+
+.inp-txt{
+	width: 100px;
+	border-radius: 4px;
+	padding: 0;
+	padding-left: 8px;
+	border: 1px solid #999;
+	margin: 0;
+	background-color: #f2f2f2;
+	outline: none;
+}
+.inp-txt:focus{
+	background-color: #fff;
+}
+.order .num{
+	display: inline-block;
+	width: 20px;
+	height: 202px;
+	text-align: center;
+	color: #fff;
+	background-color: #dbdbdb;
+	overflow: hidden;
+}
+.num>span{
+	display: block;
+	font: 16px/20px monospace;
+	overflow: hidden;
+}
+.order textarea{
+    font: 16px/20px monospace;
+	padding: 0 0 0 3px;
+	color: #126212;
+	background-color: #000;
+	outline: none;
+	resize: none;
+}
