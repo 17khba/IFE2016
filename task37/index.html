@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<title>task37</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<header>
+		<h1 class="clearfix"><a class="showLogin fl" href="javascript:;">登录</a></h1>
+	</header>
+	<fieldset>
+		<legend>UI组件之浮出层</legend>
+		<p>1.点击遮罩透明区域或关闭按钮隐藏浮出层</p>
+		<p>2.点击页面头部的登陆按钮显示浮出层</p>
+		<p>3.拖拽浮出层文本标题可移动位置</p>
+		<p>4.拖拽浮出层右下角可改变其大小</p>
+	</fieldset>
+	<div class="dialog-wrap">
+		<div class="dialog">
+			<h3 class="dialog-tit clearfix">
+				<span class="tit-txt fl">登录</span>
+				<i class="btn-close fr">×</i>
+			</h3>
+			<section class="dialog-cont">
+				<form action="javascript:;" class="login-info">
+					<input type="text" name="usrName" placeholder="请输入用户名" autocomplete="off">
+					<input type="text" name="usrPw" placeholder="请输入密码" autocomplete="off">
+					<button class="btn-login">登录</button>
+				</form>
+			</section>
+			<div class="right-line"></div>
+			<div class="bot-line"></div>
+			<div class="area-btn"></div>
+		</div>
+		<div class="dialog-overlay"></div>
+	</div>
+	<script src="js/index.js"></script>
+</body>
+</html>

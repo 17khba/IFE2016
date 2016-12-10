@@ -1,0 +1,213 @@
+/* line 15, index.scss */
+* {
+  box-sizing: border-box; }
+
+/* line 18, index.scss */
+html,
+body {
+  width: 100%;
+  height: 100%; }
+
+/* line 23, index.scss */
+body {
+  margin: 0;
+  font: 14px "Microsoft Yahei"; }
+
+/* line 27, index.scss */
+a {
+  text-decoration: none; }
+
+/* line 30, index.scss */
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table; }
+  /* line 34, index.scss */
+  .clearfix:before,
+  .clearfix:after {
+    box-sizing: border-box; }
+
+/* line 38, index.scss */
+.clearfix:after {
+  clear: both; }
+
+/* line 41, index.scss */
+.fl {
+  float: left; }
+
+/* line 44, index.scss */
+.fr {
+  float: right; }
+
+/* line 47, index.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0; }
+
+/* line 56, index.scss */
+button,
+input[type='text'] {
+  padding: 0;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  outline: none; }
+
+/* line 63, index.scss */
+button {
+  cursor: pointer; }
+
+/* line 66, index.scss */
+input[type='text']:focus {
+  border-color: #66afe9;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+
+/* line 70, index.scss */
+input + input {
+  margin-top: 10px; }
+
+/* line 73, index.scss */
+[class^='btn-'] {
+  text-align: center;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #488fd2; }
+  /* line 78, index.scss */
+  [class^='btn-']:hover {
+    background-color: #71a8dc; }
+  /* line 81, index.scss */
+  [class^='btn-']:active {
+    background-color: #2e76b9; }
+
+/* line 88, index.scss */
+header {
+  height: 46px;
+  background-color: #42b983; }
+  /* line 91, index.scss */
+  header > h1 {
+    width: 1200px;
+    margin: 0 auto; }
+  /* line 95, index.scss */
+  header a {
+    font: 16px/46px "Microsoft Yahei";
+    padding: 0 20px;
+    color: #fff;
+    -webkit-transition: all .2s ease;
+            transition: all .2s ease; }
+    /* line 100, index.scss */
+    header a:hover {
+      background-color: #66c89c; }
+    /* line 103, index.scss */
+    header a:active {
+      background-color: #359368; }
+
+/* line 108, index.scss */
+fieldset {
+  display: inline-block;
+  margin-top: 10px; }
+
+/* line 113, index.scss */
+.dialog-wrap .dialog {
+  position: absolute;
+  z-index: 999;
+  width: 300px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .25s ease, visibility .25s ease;
+          transition: opacity .25s ease, visibility .25s ease; }
+/* line 125, index.scss */
+.dialog-wrap .dialog-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .15s ease;
+          transition: all .15s ease; }
+
+/* line 137, index.scss */
+.dialog-tit {
+  height: 36px;
+  background-color: #ccc;
+  border-radius: 4px 4px 0 0;
+  cursor: move;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  /* line 143, index.scss */
+  .dialog-tit .tit-txt {
+    font: 16px/36px "Microsoft Yahei";
+    padding-left: 15px; }
+  /* line 147, index.scss */
+  .dialog-tit .btn-close {
+    font: lighter 28px/36px arial;
+    padding: 0 15px;
+    background-color: transparent;
+    cursor: pointer; }
+
+/* line 154, index.scss */
+.login-info {
+  width: 200px;
+  padding: 20px;
+  margin: 0 auto; }
+  /* line 158, index.scss */
+  .login-info > input[type='text'] {
+    width: 160px;
+    line-height: 24px;
+    padding-left: 8px; }
+  /* line 163, index.scss */
+  .login-info .btn-login {
+    width: 160px;
+    line-height: 24px;
+    margin-top: 10px; }
+
+/* line 170, index.scss */
+.dialog-wrap .active-dialog {
+  opacity: 1;
+  visibility: visible; }
+  /* line 173, index.scss */
+  .dialog-wrap .active-dialog ~ .dialog-overlay {
+    opacity: 1;
+    visibility: visible; }
+/* line 178, index.scss */
+.dialog-wrap [class$='-line'] {
+  position: absolute;
+  cursor: ew-resize; }
+/* line 182, index.scss */
+.dialog-wrap .right-line {
+  right: 0;
+  top: 0;
+  width: 3px;
+  height: 100%; }
+/* line 188, index.scss */
+.dialog-wrap .bot-line {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  cursor: ns-resize; }
+/* line 195, index.scss */
+.dialog-wrap .area-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  cursor: nwse-resize; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,203 @@
+// var
+$fc_fff: #fff;
+$fc_dbd: #dbdbdb;
+
+$ff_ms: 'Microsoft Yahei';
+$ff_ari: arial;
+
+$bgc_t: transparent;
+$bgc_42b: #42b983;
+$bgc_488: #488fd2;
+
+$bdc_66a: #66afe9;
+
+// css reset
+*{
+	box-sizing: border-box;
+}
+html,
+body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	margin: 0;
+	font: 14px $ff_ms;
+}
+a{
+	text-decoration: none;
+}
+.clearfix:before,
+.clearfix:after{
+	content: '';
+	display: table;
+	&{
+		box-sizing: border-box;
+	}
+}
+.clearfix:after{
+	clear: both;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+	margin: 0;
+}
+button,
+input[type='text']{
+	padding: 0;
+	border: 1px solid $fc_dbd;
+	border-radius: 4px;
+	outline: none;
+}
+button{
+	cursor: pointer;
+}
+input[type='text']:focus{
+	border-color: $bdc_66a;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+input + input{
+	margin-top: 10px;
+}
+[class^='btn-']{
+	text-align: center;
+	border-radius: 4px;
+	color: $fc_fff;
+	background-color: $bgc_488;
+	&:hover{
+		background-color: lighten($bgc_488, 10%);
+	}
+	&:active{
+		background-color: darken($bgc_488, 10%);
+	}
+}
+
+
+
+header{
+	height: 46px;
+	background-color: $bgc_42b;
+	>h1{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	a{
+		font: 16px/46px $ff_ms;
+		padding: 0 20px;
+		color: $fc_fff;
+		transition: all .2s ease;
+		&:hover{
+			background-color: lighten($bgc_42b, 10%);
+		}
+		&:active{
+			background-color: darken($bgc_42b, 10%);
+		}
+	}
+}
+fieldset{
+	display: inline-block;
+	margin-top: 10px;
+}
+.dialog-wrap{
+	.dialog{
+		position: absolute;
+		z-index: 999;
+		width: 300px;
+		height: 200px;
+		background-color: #fff;
+		border-radius: 4px;
+		user-select: none;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity .25s ease, visibility .25s ease;
+	}
+	.dialog-overlay{
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, .3);
+		opacity: 0;
+		visibility: hidden;
+		transition: all .15s ease;
+	}
+}
+.dialog-tit{
+	height: 36px;
+	background-color: #ccc;
+	border-radius: 4px 4px 0 0;
+	cursor: move;
+	user-select: none;
+	.tit-txt{
+		font: 16px/36px $ff_ms;
+		padding-left: 15px;
+	}
+	.btn-close{
+		font: lighter 28px/36px $ff_ari;
+		padding: 0 15px;
+		background-color: $bgc_t;
+		cursor: pointer;
+	}
+}
+.login-info{
+	width: 200px;
+	padding: 20px;
+	margin: 0 auto;
+	>input[type='text']{
+		width: 160px;
+		line-height: 24px;
+		padding-left: 8px;
+	}
+	.btn-login{
+		width: 160px;
+		line-height: 24px;
+		margin-top: 10px;
+	}
+}
+.dialog-wrap{
+	.active-dialog{
+		opacity: 1;
+		visibility: visible;
+		& ~ .dialog-overlay{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	[class$='-line']{
+		position: absolute;
+		cursor: ew-resize;
+	}
+	.right-line{
+		right: 0;
+		top: 0;
+		width: 3px;
+		height: 100%;
+	}
+	.bot-line{
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		cursor: ns-resize;
+	}
+	.area-btn{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 10px;
+		height: 10px;
+		cursor: nwse-resize;
+	}
+}
