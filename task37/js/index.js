@@ -219,17 +219,15 @@
 
   }
 
-  var move = new Drag(obj());
-
-  function obj(){
-  	return {
-  		oTit: oTit,
-  		oDialog: oDialog,
-  		rigLine: rigLine,
-  		botLine: botLine,
-  		botArea: botArea
-  	}
+  var obj = {
+  	oTit: oTit,
+  	oDialog: oDialog,
+  	rigLine: rigLine,
+  	botLine: botLine,
+  	botArea: botArea
   }
+
+  var move = new Drag(obj());
 
 
 })(window, document);
