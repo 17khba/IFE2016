@@ -227,7 +227,7 @@
   	botArea: botArea
   }
 
-  var move = new Drag(obj());
+  var move = new Drag(obj);
 
 
 })(window, document);

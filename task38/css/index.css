@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+table {
+  border-top: 1px solid  #dbdbdb;
+  border-left: 1px solid  #dbdbdb;
+  margin: 100px auto;
+
+  table-layout: inherit;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+th,
+td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid  #dbdbdb;
+}
+tbody > tr:hover {
+  background-color: #f2f2f2;
+}
+th > div {
+  display: inline-block;
+}
+.arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  margin: 0 5px;
+
+  cursor: pointer;
+}
+.arrow_top {
+  border-top: 10px solid  #dbdbdb;
+}
+.arrow_bot {
+  border-bottom: 10px solid  #dbdbdb;
+}
