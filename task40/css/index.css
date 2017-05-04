@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "iconfont";
+  /* project id 292127 */
+  src: url("http://at.alicdn.com/t/font_59j1kpac09dg3nmi.eot");
+  src: url("http://at.alicdn.com/t/font_59j1kpac09dg3nmi.eot?#iefix") format("embedded-opentype"), url("http://at.alicdn.com/t/font_59j1kpac09dg3nmi.woff") format("woff"), url("http://at.alicdn.com/t/font_59j1kpac09dg3nmi.ttf") format("truetype"), url("http://at.alicdn.com/t/font_59j1kpac09dg3nmi.svg#iconfont") format("svg"); }
+html,
+body {
+  height: 100%; }
+
+body {
+  margin: 0; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+table {
+  width: 100%;
+  min-width: 100%;
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: collapse; }
+
+th,
+td {
+  min-width: 20px;
+  height: 23px;
+  text-align: center;
+  padding: 5px;
+  border: transparent;
+  border-radius: 4px; }
+
+.canlendar {
+  display: table;
+  width: 310px;
+  height: 100%;
+  margin: 0 auto; }
+
+.tab_wrap {
+  display: table-cell;
+  vertical-align: middle; }
+
+.tab_border {
+  height: 276px;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); }
+
+.prev_next {
+  color: #999; }
+
+td {
+  cursor: pointer; }
+  td:hover {
+    background-color: #eee; }
+
+.today {
+  color: #fff;
+  background-color: #357ebd; }
+  .today:hover {
+    background-color: #357ebd; }
+
+.prev,
+.next {
+  font: bold 24px iconfont;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/*# sourceMappingURL=index.css.map */
