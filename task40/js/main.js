@@ -1,5 +1,6 @@
 function Canlendar (ele, option) {
-  this.wraper = typeof ele === 'string' && $(ele);
+  var element = document.querySelector(ele);
+  this.wraper = element !== null && $(ele);
   this.date = new Date();
   // 当前高亮日期在table中的坐标
   this.rows = 0;
@@ -7,17 +8,16 @@ function Canlendar (ele, option) {
   this.tab_head = $('<thead>');
   this.tab_body = $('<tbody>');
   this.format = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+  if (isObj(option) && option.format && option.format)  $.extend(this.format, option.format);
 
   this.init(option);
 }
 
 Canlendar.prototype = {
   constructor: Canlendar,
-  init: function (option) {
-    var _dat = new Date();
-    $.extend(this.format, isObj(option) && option.format);
+  init: function () {
     this.createHead();
-    this.createBody(_dat);
+    this.createBody();
   },
   createHead: function () {
     var self = this;
@@ -28,7 +28,7 @@ Canlendar.prototype = {
 
     var tr_one = '<tr>' +
                  '<th class="prev">&#xe667;</th>' + 
-                 '<th colspan="5" class="info">' + getTimeStr(_date) + '</th>' + 
+                 '<th colspan="5" class="timeInfo">' + getTimeStr(_date) + '</th>' + 
                  '<th class="next">&#xe668;</th>' + 
                  '</tr>';
     $(tr_one).appendTo(tit);
@@ -44,24 +44,26 @@ Canlendar.prototype = {
     $('.prev').on('click', self.setPrevMonth.bind(self));
     $('.next').on('click', self.setNextMonth.bind(self));
   },
-  createBody: function (_dat) {
-    var self, date, _date, _setDate, _getDate, isSameMonth, _tbody, _tr, _td;
+  createBody: function () {
+    var self, timeObj, date, _date, _setDate, _getDate, isSameMonth, _tbody, _tr, _td;
 
     self = this;
+    // 复制当前时间留待渲染用
+    timeObj = new Date(this.date);
     date = this.date.getDate();
-    _date = _dat.getDate();
+    _date = timeObj.getDate();
     // 设置日历startDate
-    _setDate = _dat.setDate(date - _date + 1);
-    _setDate = _dat.setDate(_dat.getDate() - _dat.getDay());
+    _setDate = timeObj.setDate(date - _date + 1);
+    _setDate = timeObj.setDate(timeObj.getDate() - timeObj.getDay());
     _tbody = this.tab_body;
 
     for (var i = 1; i <= 6; i++) {
       _tr = $('<tr>');
       for (var j = 1; j <= 7; j++) {
-        _getDate = _dat.getDate();
+        _getDate = timeObj.getDate();
 
-        isSameMonth = _dat.getMonth() === this.date.getMonth();
-        isToday = _dat.getTime() === this.date.getTime();
+        isSameMonth = timeObj.getMonth() === this.date.getMonth();
+        isToday = isSameMonth && timeObj.getDate() === this.date.getDate();
         _td = $('<td>');
 
         // 不是同月的颜色变淡(添加prev_next类名)
@@ -80,61 +82,68 @@ Canlendar.prototype = {
           .text(_getDate)
           .appendTo(_tr);
 
-        (function (i, j) {
-          _td.on('click', function () {
-              var _dat = self.date.getDate();
-              var old_td = $('.today');
-              var old_rows = self.rows;
-              var old_cells = self.cells;
-              var old_index = old_rows * 7 + old_cells;
-
-              var new_index = i * 7 + j;
-              self.date.setDate(new_index - old_index + _dat);
-
-              old_td.removeClass('today');
-              $(this).addClass('today');
-              self.rows = i;
-              self.cells = j;
-              self.setTit();
-            })
-        })(i, j);
+        (function (i, j, isSameMonth) {
+          _td.on('click', toggleDay.bind(_td, i, j, isSameMonth));
+        })(i, j, isSameMonth);
         
-        _dat.setDate(_getDate + 1);
+        timeObj.setDate(_getDate + 1);
       }
       _tr.appendTo(_tbody);
     }
 
     _tbody.appendTo(this.wraper);
 
+    function toggleDay (i, j, isSameMonth) {
+      var _dat = self.date.getDate();
+      var old_td = $('.today');
+      var old_rows = self.rows;
+      var old_cells = self.cells;
+      var old_index = old_rows * 7 + old_cells;
+
+      var new_index = i * 7 + j;
+      self.date.setDate(new_index - old_index + _dat);
+
+      self.rows = i;
+      self.cells = j;
+
+      if (!isSameMonth) {
+        self.tab_body.html('');
+        self.createBody();
+
+        self.setTit();  
+        return false;
+      }
+
+      old_td.removeClass('today');
+      $(this).addClass('today');
+      self.setTit();
+    }
+
   },
   setTit: function () {
     var _dat = new Date(this.date);
-    $('.info').text(getTimeStr(_dat));
+    $('.timeInfo').text(getTimeStr(_dat));
+  },
+  _setMonth: function (MonthVal) {
+    this.date.setMonth(MonthVal);
+
+    var timeStr = getTimeStr(this.date);
+    $('.timeInfo').text(timeStr);
+    this.tab_body.html('');
+    this.createBody();
   },
   setPrevMonth: function () {
     var prevMonth = this.date.getMonth() - 1;
-    this.date.setMonth(prevMonth);
-
-    var _dat = new Date(this.date);
-    $('.info').text(getTimeStr(_dat));
-    // this.setTit();
-    this.tab_body.html('');
-    this.createBody(_dat);
+    this._setMonth(prevMonth);
   },
   setNextMonth: function () {
     var nextMonth = this.date.getMonth() + 1;
-    this.date.setMonth(nextMonth);
-
-    var _dat = new Date(this.date);
-    $('.info').text(getTimeStr(_dat));
-    // this.setTit();
-    this.tab_body.html('');
-    this.createBody(_dat);
+    this._setMonth(nextMonth);
   }
 }
 
 function isObj (obj) {
-  return toString.call(obj).slice(8, -1) === 'Object';
+  return [].toString.call(obj).slice(8, -1) === 'Object';
 }
 
 function getTimeStr (_dat) {
