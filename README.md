@@ -6,23 +6,23 @@
 
 [task3](http://17khba.github.io/IFE2016/task3/)
 
-[task4](http://17khba.github.io/IFE2016/task4/)
+[任务四:水平垂直居中](http://17khba.github.io/IFE2016/task4/)
 
-[task5](http://17khba.github.io/IFE2016/task5/)
+[任务五:HTML文章编码](http://17khba.github.io/IFE2016/task5/)
 
-[task6](http://17khba.github.io/IFE2016/task6/)
+[任务六：报纸排版](http://17khba.github.io/IFE2016/task6/)
 
-[task7](http://17khba.github.io/IFE2016/task7/)
+[任务七:技术产品官网](http://17khba.github.io/IFE2016/task7/)
 
-[task8](http://17khba.github.io/IFE2016/task8/)
+[任务八:响应式网格](http://17khba.github.io/IFE2016/task8/)
 
-[task9](http://17khba.github.io/IFE2016/task9/)
+[任务九:后台管理](http://17khba.github.io/IFE2016/task9/)
 
-[task10](http://17khba.github.io/IFE2016/task10/)
+[任务十:Flex layout](http://17khba.github.io/IFE2016/task10/)
 
-[task11](http://17khba.github.io/IFE2016/task11/)
+[任务十一:移动端布局](http://17khba.github.io/IFE2016/task11/view/)
 
-[task12](http://17khba.github.io/IFE2016/task12/)
+[任务十二:CSS新特性](http://17khba.github.io/IFE2016/task12/)
 
 [task13](http://17khba.github.io/IFE2016/task13/)
 
@@ -34,15 +34,15 @@
 
 [task17](http://17khba.github.io/IFE2016/task17/)
 
-[task18](http://17khba.github.io/IFE2016/task18/)
+[任务十八:JS数组](http://17khba.github.io/IFE2016/task18/)
 
-[task19](http://17khba.github.io/IFE2016/task19/)
+[任务十九:冒泡排序](http://17khba.github.io/IFE2016/task19/)
 
 [task20](http://17khba.github.io/IFE2016/task20/)
 
-[task21](http://17khba.github.io/IFE2016/task21/)
+[任务二十一:对话框](http://17khba.github.io/IFE2016/task21/)
 
-[task22](http://17khba.github.io/IFE2016/task22/)
+[任务二十二:JS和树](http://17khba.github.io/IFE2016/task22/)
 
 [task23](http://17khba.github.io/IFE2016/task23/)
 
